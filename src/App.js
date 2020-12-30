@@ -1,16 +1,20 @@
 import React from 'react';
-import './App.css';
-import Nav from './components/Nav';
-import Button from './components/Button';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Home from "./components/Home";
+
+import Toolbar from "./components/Toolbar";
 
 
 function App() {
   return (
-    <div>
-   <Nav />
-   <p>Your class is only a click away...</p>
-   <Button />
-   </div>
+     <Router>
+     <Switch>
+     {/* <Route path="/SideDrawer" component={SideDrawer} /> */}
+      <Route exact path="/Toolbar" component={Toolbar} />
+     
+      <Route path="/" component={Home} />
+     </Switch>
+   </Router>
   );
 }
 

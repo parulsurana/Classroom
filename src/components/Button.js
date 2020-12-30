@@ -1,10 +1,11 @@
 import React from 'react'
+import {Link} from 'react-router-dom';
 
 export default function Button() {
     return (
-        <div>
-            <button class="btn"><a href="" >INSTRUCTORS</a></button>
-            <button class="btn"><a href="" >STUDENTS</a></button>
+        <div className="Button">
+            <Link to="/" className="btn">INSTRUCTOR</Link>
+            <Link to="/" className="btn">STUDENTS</Link>
         </div>
     )
 }
