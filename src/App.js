@@ -6,6 +6,7 @@ import Toolbar from "./components/Toolbar";
 
 
 function App() {
+	console.log("Heya ");
   return (
      <Router>
      <Switch>
