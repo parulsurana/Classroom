@@ -1,0 +1,13 @@
+.classNavBar{
+    background-color: #f9813a;
+    height: 70px;
+}
+
+.classNavBar_left{
+    display: flex;
+    align-items: center;
+}
+
+.classNavBar_logo{
+    width: 15%;
+}

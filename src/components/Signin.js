@@ -1,16 +1,15 @@
 import React from "react";
-import {Link} from 'react-router-dom';
-import './Signin.css';
+import Button from "./Button";
+import { Link } from "react-router-dom";
+import "./Signin.css";
 
 export default function Signin() {
   return (
     <div className="Signin">
-
       <div class="signin-box">
         <h1>Sign in</h1>
 
         <form>
-        
           <div class="user-box">
             <input type="text" name="" required="" />
             <label>Email Address</label>
@@ -21,19 +20,21 @@ export default function Signin() {
             <label>Password</label>
           </div>
 
-          <button class="signin_btn">
+          {/* <button class="signin_btn">
           <Link to="/Toolbar" className="signin_submit">Sign in</Link>
-          </button>
+          </button> */}
+          <Link to="/Toolbar">
+            <Button buttonName="signin_submit" label="Sign in" />
+          </Link>
 
           <p class="signin_comment">
             Not registered yet ?
-            <Link to="/Signup" className="signin_link">Sign up</Link>
+            <Link to="/Signup" className="signin_link">
+              Sign up
+            </Link>
           </p>
-
         </form>
-
       </div>
-
     </div>
   );
 }

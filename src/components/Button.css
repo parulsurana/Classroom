@@ -1,0 +1,46 @@
+.homeButton {
+  border-radius: 6px;
+  font-family: "Carter One", cursive;
+  font-weight: bold;
+  color: #f7f5f5;
+  font-size: 26px;
+  padding: 10px 30px 10px 30px;
+  margin: 40px;
+  outline: none;
+  text-decoration: none;
+  border: 2px solid whitesmoke;
+  background-color: Transparent;
+  background-repeat: no-repeat;
+}
+
+.homeButton:hover {
+  background: #c5ced1;
+  color: black;
+  text-decoration: none;
+}
+
+.signin_submit {
+  display: flex;
+  background-color: rgba(0, 0.8, 0.8, 0.5);
+  float: left;
+  border-radius: 4px;
+  border: none;
+  padding: 10px 16px;
+  color: #f46303;
+  font-size: 18px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: 0.5s;
+  letter-spacing: 4px;
+  outline-style: none;
+}
+
+.signin_submit:hover {
+  padding: 10px 20px;
+  color: rgb(252, 247, 247);
+  border-radius: 4px;
+}
+
+
+
