@@ -1,15 +1,17 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import "./Toolbar.css";
-import logo from '../Assets/logo.png';
+import logo from '../Assets/studyhunt.png';
 import DrawerToggleButton from './SideDrawer/DrawerToggleButton';
 import SideDrawer from './SideDrawer/SideDrawer';
 import BackDrop from './BackDrop/BackDrop';
+import ClassNavBar from './ClassNavBar';
 
 
 const Toolbar = props => (
     <header className="toolbar">
-        <nav className="toolbar__navigation">
+    <ClassNavBar />
+        {/* <nav className="toolbar__navigation">
             <div> 
             <DrawerToggleButton />
             </div>
@@ -26,7 +28,7 @@ const Toolbar = props => (
                     <li><Link to="/">PROFILE</Link></li>
                 </ul>
             </div>
-        </nav>
+        </nav> */}
         <SideDrawer />
         <BackDrop />
     </header>
