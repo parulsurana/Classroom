@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.signup {
+  text-align: center;
+  background-image: linear-gradient(
+      rgba(10, 10, 10, 0.5),
+      rgba(0, 0.8, 0.8, 0.5)
+    ),
+    url("../Assets/pexels-polina-zimmerman-3747403.jpg");
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: 100% 800px;
+}
+
+.signup_box > h1 {
+  margin-bottom: 30px;
+  text-align: center;
+  color: blanchedalmond;
+}
+
+.signup_box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 660px;
+  padding: 40px;
+  background-color: rgba(3, 3, 3, 0.5);
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+}
+
+
+.user-box {
+  margin: 10px;
+  text-align: center;
+}
+
+.user-box .signup_input {
+  width: 100%;
+  padding-top: 12px;
+  padding-bottom: 0;
+  font-size: 16px;
+  color: rgb(233, 227, 227);
+  text-decoration: none;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+
+.user-box .signup_label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-top: 10px;
+  padding-bottom: 0;
+  font-size: 16px;
+  color: rgb(92, 91, 91);
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+
+.user-box:focus-within label {
+  top: -10px !important;
+  left: 0 !important;
+  color: #f46f03 !important;
+  font-size: 10px !important;
+}
+
+#country {
+  width: 100%;
+  margin: 0px 0px 20px 0px;
+  padding: 5px;
+  border: none;
+  background: transparent;
+  color: white;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.signup_submit{
+  /* position: relative; */
+  display: inline-block;
+  padding: 8px 20px;
+  color: #f46303;
+  font-size: 18px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: 0.5s;
+  letter-spacing: 4px;
+}
+
+.signup_submit:hover{
+  padding: 10px 20px;
+  /* background: #f46303; */
+  color: rgb(252, 247, 247);
+  border-radius: 4px;
+  /* padding-top: 5px; */
+}
+
+.signup_btn {
+  padding-top: 5px;
+  float: left;
+  border-radius: 4px;
+  background-color: rgba(0, 0.8, 0.8, 0.5);
+  border: none;
+  text-decoration: none;
+}
+
+.signup_comment {
+  /* position: relative; */
+
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin-top: 80px ;
+  text-align: center;
+  color: antiquewhite;
+  font-size: 16px;
+}
+
+.Signin_link {
+  text-decoration: none;
+  color: #f46303;
+  font-size: 20px;
+  padding: 5px;
+}
