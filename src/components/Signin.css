@@ -52,7 +52,6 @@
   background: transparent;
 }
 
-
 .user-box > label {
   position: absolute;
   top: 0;
@@ -72,47 +71,22 @@
   font-size: 12px;
 }
 
-.signin_submit {
-  /* position: relative; */
-  display: inline-block;
-  padding: 8px 20px;
-  color: #f46303;
-  font-size: 18px;
-  text-decoration: none;
-  text-transform: uppercase;
-  overflow: hidden;
-  transition: 0.5s;
-  letter-spacing: 4px;
-}
-
-.signin_submit:hover{
-  padding: 10px 20px;
-  /* background: #f46303; */
-  color: rgb(252, 247, 247);
-  border-radius: 4px;
-  /* padding-top: 5px; */
-}
-
-.signin_btn {
-  padding-top: 5px;
-  float: left;
-  border-radius: 4px;
-  background-color: rgba(0, 0.8, 0.8, 0.5);
-  border: none;
-  text-decoration: none;
-}
-
 .signin_comment {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   margin: 80px auto;
   color: antiquewhite;
   font-size: 16px;
 }
 
 .signin_link {
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;  
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   text-decoration: none;
   color: #f46303;
   font-size: 20px;
   padding: 5px;
+}
+
+.signin_link:hover {
+  color: black;
+  cursor: pointer;
 }
