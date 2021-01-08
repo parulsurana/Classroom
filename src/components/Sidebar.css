@@ -3,11 +3,12 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
-}
-
-.classNavBar {
   background-color: #f9813a;
   box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.5);
+
+}
+
+.navbar-left {
   width: 100%;
   margin-top: 0;
   height: 80px;
@@ -15,7 +16,7 @@
   align-items: center;
 }
 
-.classNavBar_logo {
+.navbar-left_logo{
   width: 15%;
 }
 
@@ -83,7 +84,6 @@
 }
 
 .navbar-toggle {
-  /* background-color: transparent; */
   width: 100%;
   height: 80px;
   display: flex;
@@ -94,4 +94,11 @@
 .text{
   margin-left: 16px;
   font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.SideButton{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
