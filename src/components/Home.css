@@ -13,9 +13,9 @@
     background-size: 100% 800px;
   }
   
-  span{
+  /* span{
     font-family: 'Italianno', cursive;
-  }
+  } */
 
   .Navbar{
     background-color: black;
@@ -31,7 +31,7 @@
     margin: 0 auto 100px auto;
   }
   
-  p {
+  .Nav > p {
     margin-top: 200px;
     font-family: 'Italianno', cursive;
     font-size: 100px;
@@ -39,67 +39,6 @@
     color: whitesmoke;
   }
   
-  /* .card{
-    width: 50%;
-    margin: 100px auto 100px auto;
-  }
-  
-  #card-one{
-    float: left;
-  }
-  
-  .teacher-img{
-     width: 200px;
-     height: 200px;
-     border: 1px solid black;
-     box-shadow:0 4px 8px 0 rgb(126, 122, 122);
-     transition: 0.3s;
-  }
-  
-  #card-two{
-    float: right;
-  }
-  
-  .student-img{
-      width: 200px;
-      height: 200px;
-      border: 1px solid black;
-      box-shadow:0 4px 4px 0 rgb(128, 125, 125);
-      transition: 0.3s;
-  }
-  
-  h4{
-    font-size: 200%;
-  }
-  
-  .teacher-img:hover {
-    box-shadow: 0 8px 16px 0px rgba(8, 3, 3, 0.2);
-  }
-  
-  .student-img:hover{
-    box-shadow: 0 8px 16px 0px rgba(8, 3, 3, 0.2);
-  } */
-  
-  /* .card {
-      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-      transition: 0.3s;
-      width: 100px 100px;
-    }
-    .card:hover {
-      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-    }
-    .container {
-      padding: 2px 16px;
-    } */
-
-    /* .a{
-      text-decoration: none;
-      color: #f7f5f5;
-    }
-  
-    .a:hover{
-     color: black;
-    } */
 
    
 

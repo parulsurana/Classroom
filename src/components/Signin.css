@@ -3,90 +3,74 @@
   padding: 0;
 }
 
-.Signin {
+.login-page {
   text-align: center;
-  background-image: linear-gradient(
-      rgba(10, 10, 10, 0.5),
-      rgba(0, 0.8, 0.8, 0.5)
-    ),
-    url("../Assets/pexels-polina-zimmerman-3747403.jpg");
-  /* background-position: 0 100px; */
+  background-image: url("../Assets/pexels-polina-zimmerman-3747403-inverted.jpg");
   height: 100vh;
   background-repeat: no-repeat;
   background-size: 100% 800px;
 }
 
-.signin-box h1 {
+.login-box > h2 {
   margin-bottom: 30px;
   text-align: center;
   color: blanchedalmond;
 }
 
-.signin-box {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 400px;
-  height: 400px;
-  padding: 40px;
-  background-color: rgba(3, 3, 3, 0.5);
-  transform: translate(-50%, -50%);
-  box-sizing: border-box;
+.login-box {
+  background-color: rgb(3, 3, 3, 0.8);
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
-  border-radius: 10px;
+  top: 50%;
+  bottom: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 440px;
+  padding: 40px;
+  float: left;
+  margin: 150px;
+  margin-left: 150px;
 }
 
-.user-box {
-  position: relative;
-}
-
-.user-box > input {
-  width: 100%;
-  padding: 10px 0;
+.client-box > input {
+  width: 280px;
+  padding-top: 8px;
+  padding-bottom: 2px;
+  padding-left: 5px;
   font-size: 16px;
-  color: #fff;
-  margin-bottom: 30px;
+  color: rgb(233, 227, 227);
+  text-decoration: none;
+  margin-bottom: 20px;
   border: none;
-  border-bottom: 1px solid #fff;
+  border: 1px solid rgb(122, 120, 120);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.7);
   outline: none;
   background: transparent;
 }
 
-.user-box > label {
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: 10px 0;
-  font-size: 16px;
-  color: #fff;
-  pointer-events: none;
-  transition: 0.5s;
-}
-
-.user-box .input-group:focus-within label,
-.user-box .input-group:focus-within label {
-  top: -10px;
-  left: 0;
+.client-box > label {
+  display: flex;
+  justify-content: start;
   color: #f46f03;
-  font-size: 12px;
+  padding-bottom: 5px;
 }
 
-.signin_comment {
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  margin: 80px auto;
-  color: antiquewhite;
+.client-box > p {
+  margin: 10px;
   font-size: 16px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: rgb(194, 191, 191);
 }
 
-.signin_link {
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+.linked-item {
   text-decoration: none;
   color: #f46303;
   font-size: 20px;
-  padding: 5px;
+  padding-left: 6px;
 }
-
-.signin_link:hover {
+.linked-item:hover {
   color: black;
   cursor: pointer;
 }

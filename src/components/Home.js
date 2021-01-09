@@ -7,10 +7,10 @@ const Home = () => {
   return (
     <div className="Home">
       <Nav />
-      <Link to="/Signin">
+      <Link to="/registerasainstructor">
         <Button buttonName="homeButton" label="Instructor" />
       </Link>
-      <Link to="/">
+      <Link to="/registerasastudent">
         <Button buttonName="homeButton" label="Student" />
       </Link>
     </div>
