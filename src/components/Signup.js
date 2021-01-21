@@ -3,14 +3,19 @@ import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import Button from "./Button";
 import { useForm } from "react-hook-form";
+
 import background from "../Assets/mainImage.jpg";
+
 
 export default function Register({ Education, Section, instructor, student }) {
   const { register, handleSubmit, errors, watch } = useForm();
 
+
+
   const onSubmit = (data) => {
     console.log(data);
   };
+
   // const history = useHistory();
   // const [userName, setUserName] = useState("");
   // const [education, setEducation] = useState("");
@@ -21,6 +26,16 @@ export default function Register({ Education, Section, instructor, student }) {
 
   // const signUp = e => {
   //   e.preventDefault()
+
+  //   history.push('/home');
+  // }
+
+  const onSubmit = (data) => {
+    console.log(data);
+  };
+
+
+
   //   history.push('/')
   // }
 
@@ -34,16 +49,19 @@ export default function Register({ Education, Section, instructor, student }) {
       <form className="register-box" onSubmit={handleSubmit(onSubmit)}>
         
       <div className="register__header">
+
         <h2>Create Account</h2>
       </div>
         
         <div className="user-box">
+
           <label>UserName</label>
           <input
             name="username"
             placeholder="UserName"
             type="text"
             ref={register({ required: true })}
+
             // value={userName}
             // onChange={(e) => setUserName(e.target.value)}
           ></input>
@@ -58,7 +76,10 @@ export default function Register({ Education, Section, instructor, student }) {
             name="gender"
             placeholder="Gender"
             type="text"
+
+
             ref={register({ required: false })}
+
             // value={gender}
             // onChange={(e) => setGender(e.target.value)}
           ></input>
@@ -66,12 +87,18 @@ export default function Register({ Education, Section, instructor, student }) {
 
         <div className="user-box">
           {Education && <label>Education</label>}
-          {Education && (
-            <input
-              name="education"
-              placeholder="Education"
-              type="text"
-              ref={register({ required: true })}
+
+          {Education && <input
+            name="education"
+            placeholder="Education"
+            type="text"
+            ref={register({required: true})}
+
+            // value={education}
+            // onChange={(e) => setEducation(e.target.value)}
+          ></input>}
+        </div>
+
 
               // value={education}
               // onChange={(e) => setEducation(e.target.value)}
@@ -81,6 +108,7 @@ export default function Register({ Education, Section, instructor, student }) {
             <p className="error_message">Your education is required</p>
           )}
           {Section && <label>Section</label>}
+
           {Section && (
             <input
               name="section"
@@ -94,6 +122,7 @@ export default function Register({ Education, Section, instructor, student }) {
           {errors.section && (
             <p className="error_message">section is required</p>
           )}
+
         </div>
 
         <div className="user-box">
@@ -102,7 +131,9 @@ export default function Register({ Education, Section, instructor, student }) {
             name="email"
             placeholder="Email"
             type="email"
-            ref={register({ required: true })}
+
+            ref={register({required: true})}
+
 
             // value={email}
             // onChange={(e) => setEmail(e.target.value)}
@@ -118,7 +149,10 @@ export default function Register({ Education, Section, instructor, student }) {
             name="password"
             placeholder="Password"
             type="password"
-            ref={register({ required: true })}
+
+            ref={register({required: true})}
+
+
             // value={password}
             // onChange={(e) => setPassword(e.target.value)}
           ></input>
@@ -127,9 +161,11 @@ export default function Register({ Education, Section, instructor, student }) {
           )}
         </div>
 
+
         {/* onClick={signUp} */}
         <div className="userSubmit">
           <Button buttonName="submit" label="Sign up" />
+
         </div>
 
         <div className="register__footer">
