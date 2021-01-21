@@ -4,46 +4,81 @@
 }
 
 .register-page {
-  text-align: center;
-  background-image: url("../Assets/pexels-polina-zimmerman-3747403.jpg");
-  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../Assets/mainImage.jpg");
   background-repeat: no-repeat;
-  background-size: 100% 800px;
+  background-position: center;
+  background-size: 100%;
+  height: 100vh;
+}
+
+.lapiImage{
+  /* z-index: 1;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden; */
+  flex: 1;
+
 }
 
 .register-box {
   background-color: rgb(3, 3, 3, 0.8);
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
-  top: 50%;
-  bottom: 50%;
   display: flex;
   flex-direction: column;
+  /* max-width: 500px; */
+  padding-top: 40px;
+  padding-right: 40px;
+  padding-left: 40px;
+  padding-bottom: 40px;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  /* float: right; */
+  flex: 0.5;
+  /* margin-top: 30px; */
+  /* margin-left: 50px; */
+  margin-right: 70px;
+  /* margin-bottom: 30px; */
+  /* z-index: 999; */
+}
+
+.register__header{
+  padding: 13px;
+  display: flex;
   justify-content: center;
   align-items: center;
-  width: 400px;
-  height: 640px;
-  padding: 40px;
-  float: right;
-  margin: 40px;
-  margin-right: 150px;
+  color: whitesmoke;
 }
 
-.register-box > h2 {
-  margin-bottom: 30px;
-  text-align: center;
-  color: blanchedalmond;
+.register__footer{
+  padding: 13px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: whitesmoke;
 }
 
+.userSubmit{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 13px;
 
-.user-box > input{
+}
+
+.user-box{
+  margin: 10px;
+}
+
+.user-box > input {
   width: 280px;
-  padding-top: 8px;
-  padding-bottom: 2px;
-  padding-left: 5px;
+  padding: 7px;
   font-size: 16px;
-  color: rgb(233, 227, 227);
+  color: rgb(255, 254, 254);
   text-decoration: none;
-  margin-bottom: 20px;
   border: none;
   border: 1px solid rgb(122, 120, 120);
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.7);
@@ -53,15 +88,14 @@
 
 .user-box > label {
   display: flex;
-  justify-content: start;
+  text-align: start;
   color: #f46f03;
   padding-bottom: 5px;
 }
 
-.user-box > p {
-  margin: 10px;
+.already {
   font-size: 16px;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
   color: rgb(194, 191, 191);
 }
 
@@ -74,4 +108,11 @@
 .link-item:hover {
   color: black;
   cursor: pointer;
-} 
+}
+
+.error_message {
+  color: #f40303;
+  padding: 0%;
+  text-align: end;
+  /* margin-bottom: 20px; */
+}
