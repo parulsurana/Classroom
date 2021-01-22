@@ -5,10 +5,12 @@ import Home from "./components/Home";
 import Signup from "./components/Signup";
 import Signin from "./components/Signin";
 import Sidebar from "./components/Sidebar";
+import Form from "./components/Forms";
+
 
 
 function App() {
-	console.log("Heya ");
+  console.log("Heya ");
   return (
      <Router>
      <Switch>
@@ -27,6 +29,16 @@ function App() {
      <Route path="/Classroom">
        <Sidebar SidebuttonTypeOne={true} SidebuttonTypeFive={true}/>
      </Route>
+     <Route path="/form">
+          <Form
+          Sejal ={true}
+           />
+        </Route>
+        <Route path="/forms">
+          <Form
+          Parul ={true}
+           />
+        </Route>
       <Route path="/">
         <Home/>
       </Route>
