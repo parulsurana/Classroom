@@ -5,63 +5,47 @@ import Button from "./Button";
 import { useForm } from "react-hook-form";
 import { auth } from "../firebase";
 
-
-
 export default function Register({ Education, Section, instructor, student }) {
   const { register, handleSubmit, errors, watch } = useForm();
-
-
 
   const onSubmit = (data) => {
     console.log(data);
   };
   const history = useHistory();
-
-  // const [userName, setUserName] = useState("");
-  // const [education, setEducation] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  // const [gender, setGender] = useState("");
   // const [section, setSection] = useState("");
 
+  const signUp = (e) => {
+    e.preventDefault();
 
-  const signUp = e => {
-    e.preventDefault()
-    
-    auth.createUserWithEmailAndPassword(email, password).then((auth) => { 
-      console.log(auth);
-      if(auth){
-        history.push('/')
-      }
-     }).catch(error => alert(error.message));
-  }
-
+    auth
+      .createUserWithEmailAndPassword(email, password)
+      .then((auth) => {
+        console.log(auth);
+        if (auth) {
+          history.push("/");
+        }
+      })
+      .catch((error) => alert(error.message));
+  };
 
   return (
     <div className="register-page">
-      
-      <div className="lapiImage">
-      </div>
-      
-      
+      <div className="lapiImage"></div>
+
       <form className="register-box" onSubmit={handleSubmit(onSubmit)}>
-        
-      <div className="register__header">
+        <div className="register__header">
+          <h2>Create Account</h2>
+        </div>
 
-        <h2>Create Account</h2>
-      </div>
-        
         <div className="user-box">
-
           <label>UserName</label>
           <input
             name="username"
             placeholder="UserName"
             type="text"
             ref={register({ required: true })}
-
-            // value={userName}
-            // onChange={(e) => setUserName(e.target.value)}
           ></input>
           {errors.username && (
             <p className="error_message">UserName is required</p>
@@ -74,33 +58,24 @@ export default function Register({ Education, Section, instructor, student }) {
             name="gender"
             placeholder="Gender"
             type="text"
-
-
             ref={register({ required: false })}
-
-            // value={gender}
-            // onChange={(e) => setGender(e.target.value)}
           ></input>
         </div>
 
         <div className="user-box">
           {Education && <label>Education</label>}
-          {Education && <input
-            name="education"
-            placeholder="Education"
-            type="text"
-            ref={register({required: true})}
-            // value={education}
-            // onChange={(e) => setEducation(e.target.value)}
-          ></input>}
-               value={education}
-               onChange={(e) => setEducation(e.target.value)}
+          {Education && (
+            <input
+              name="education"
+              placeholder="Education"
+              type="text"
+              ref={register({ required: true })}
+            />
           )}{" "}
           {errors.education && (
             <p className="error_message">Your education is required</p>
           )}
           {Section && <label>Section</label>}
-
           {Section && (
             <input
               name="section"
@@ -109,14 +84,12 @@ export default function Register({ Education, Section, instructor, student }) {
               ref={register({ required: true })}
               // value={section}
               // onChange={(e) => setSection(e.target.value)}
-            ></input>
-          )}
+            />
+          )}{" "}
           {errors.section && (
             <p className="error_message">section is required</p>
           )}
         </div>
-
-
 
         <div className="user-box">
           <label>Email</label>
@@ -127,13 +100,11 @@ export default function Register({ Education, Section, instructor, student }) {
             ref={register({ required: true })}
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-
-          ></input>
+          />{" "}
           {errors.email && (
             <p className="error_message">Your email-id is required</p>
           )}
         </div>
-
 
         <div className="user-box">
           <label>Password</label>
@@ -141,19 +112,16 @@ export default function Register({ Education, Section, instructor, student }) {
             name="password"
             placeholder="Password"
             type="password"
-
             ref={register({ required: true })}
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-
-          ></input>
+          />{" "}
           {errors.password && (
             <p className="error_message">password is required</p>
           )}
         </div>
 
-       
-        <div className="userSubmit"  onClick={signUp}>
+        <div className="userSubmit" onClick={signUp}>
           <Button buttonName="submit" label="Sign up" />
         </div>
 
@@ -172,10 +140,7 @@ export default function Register({ Education, Section, instructor, student }) {
             )}
           </p>
         </div>
-
-
       </form>
-    </div>
     </div>
   );
 }
