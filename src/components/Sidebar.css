@@ -1,5 +1,6 @@
 .navbar {
   display: flex;
+  /* flex-wrap: wrap; */
   align-items: center;
   justify-content: space-between;
   width: 100%;
@@ -17,7 +18,7 @@
 }
 
 .navbar-left_logo{
-  width: 15%;
+  width: 240px;
 }
 
 .menu-bars > .MuiSvgIcon-root {

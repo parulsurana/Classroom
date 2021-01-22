@@ -5,22 +5,42 @@
 
 .login-page {
   text-align: center;
-  background-image: url("../Assets/mainImage-inverted.jpg");
+  /* background-image: url("../Assets/mainImage-inverted.jpg"); */
   height: 100vh;
   background-repeat: no-repeat;
-  background-size: 100% 800px;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
 }
 
-.login__header{
+@media (max-width: 480px) {
+  .login-page {
+    background-image: url("../Assets/mainImage-inverted.jpg");
+  }
+}
+
+@media (min-width: 481px) and (max-width: 1024px) {
+  .login-page {
+    background-image: url("../Assets/mainImage-inverted.jpg");
+  }
+}
+
+@media (min-width: 1025px) {
+  .login-page {
+    background-image: url("../Assets/mainImage-inverted.jpg");
+  }
+}
+
+.login__header {
   padding: 13px;
   display: flex;
   justify-content: center;
   align-items: center;
   color: whitesmoke;
-  font-size: 100px;
+  font-size: 30px;
 }
 
-.login__footer{
+.login__footer {
   padding: 13px;
   display: flex;
   justify-content: center;
@@ -28,13 +48,12 @@
   color: whitesmoke;
 }
 
-.client__submit{
+.client__submit {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 13px;
 }
-
 
 .login-box {
   background-color: rgb(3, 3, 3, 0.8);
@@ -76,7 +95,7 @@
   padding-bottom: 5px;
 }
 
-.client-box > p {
+.create {
   margin: 10px;
   font-size: 16px;
   font-family: Georgia, "Times New Roman", Times, serif;

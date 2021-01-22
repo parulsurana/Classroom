@@ -1,46 +1,104 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-.Home{
-    text-align: center;
-    background-image: linear-gradient(rgba(212, 209, 209, 0.5), rgba(0, 0.8, 0.8, 0.5)),
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.Home {
+  text-align: center;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+
+.Navbar {
+  background-color: black;
+  opacity: 65%;
+  height: 70px;
+}
+
+.Logo {
+  width: 250px;
+  /* margin-right: 20px;
+  margin: 0 auto 100px auto; */
+}
+
+.Nav > p {
+  margin-top: 200px;
+  font-family: "Italianno", cursive;
+  font-size: 100px;
+  font-weight: normal;
+  color: whitesmoke;
+}
+
+@media only screen and (max-width: 535px) {
+  .Home {
+    background-image: linear-gradient(
+        rgba(212, 209, 209, 0.5),
+        rgba(0, 0.8, 0.8, 0.5)
+      ),
       url("../Assets/mainImage.jpg");
-    height: 100vh;
-    background-repeat: no-repeat;
-    background-size: 100% 800px;
+    height: 100vh;  
+    overflow: hidden;
   }
-  
-  /* span{
-    font-family: 'Italianno', cursive;
-  } */
+}
 
-  .Navbar{
-    background-color: black;
-    opacity: 65%;
-    height: 70px;
+@media only screen and (min-width: 500px) {
+  .Home {
+    background-image: linear-gradient(
+        rgba(212, 209, 209, 0.5),
+        rgba(0, 0.8, 0.8, 0.5)
+      ),
+      url("../Assets/mainImage.jpg");
+    height: 100vh;  
   }
-  
- 
-  
-  .Logo {
-    width: 15%;
-    margin-right: 20px;
-    margin: 0 auto 100px auto;
-  }
-  
-  .Nav > p {
-    margin-top: 200px;
-    font-family: 'Italianno', cursive;
-    font-size: 100px;
-    font-weight:normal;
-    color: whitesmoke;
-  }
-  
+}
 
-   
+@media only screen and (min-width: 600px) {
+  .Home {
+    background-image: linear-gradient(
+        rgba(212, 209, 209, 0.5),
+        rgba(0, 0.8, 0.8, 0.5)
+      ),
+      url("../Assets/mainImage.jpg");
+      height: 100vh;  
+  }
+}
 
-  
-    
+@media only screen and (min-width: 768px) {
+  .Home {
+    background-image: linear-gradient(
+        rgba(212, 209, 209, 0.5),
+        rgba(0, 0.8, 0.8, 0.5)
+      ),
+      url("../Assets/mainImage.jpg");
+      height: 100vh;  
+
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .Home {
+    background-image: linear-gradient(
+        rgba(212, 209, 209, 0.5),
+        rgba(0, 0.8, 0.8, 0.5)
+      ),
+      url("../Assets/mainImage.jpg");
+      height: 100vh;  
+
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .Home {
+    background-image: linear-gradient(
+        rgba(212, 209, 209, 0.5),
+        rgba(0, 0.8, 0.8, 0.5)
+      ),
+      url("../Assets/mainImage.jpg");
+      height: 100vh;  
+
+  }
+}
+

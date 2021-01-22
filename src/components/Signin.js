@@ -14,8 +14,7 @@ export default function Signin({ Instructor, Student }) {
     auth
       .signInWithEmailAndPassword(email, password)
       .then((auth) => {
-        history.push("/");
-        console.log("working");
+        history.push("/Classroom");
       })
       .catch((error) => alert(error.message));
   };
@@ -24,7 +23,7 @@ export default function Signin({ Instructor, Student }) {
     <div className="login-page">
       <div class="login-box">
         <div className="login__header">
-          <h2>Sign in</h2>
+          <h2>Sign In</h2>
         </div>
 
         <form>
@@ -60,15 +59,15 @@ export default function Signin({ Instructor, Student }) {
             <Button buttonName="submit" label="Sign in" />
           </div>
           <div className="login__footer">
-            <p>
-              Create an Account
+            <p className="create">
+              Create your Account
               {Instructor && (
-                <Link to="/registerasainstructor" className="linked-item">
+                <Link to="/RegisterInstructor" className="linked-item">
                   Sign up
                 </Link>
               )}
               {Student && (
-                <Link to="/registerasastudent" className="linked-item">
+                <Link to="/RegisterStudent" className="linked-item">
                   Sign up
                 </Link>
               )}

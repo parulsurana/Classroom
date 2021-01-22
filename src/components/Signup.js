@@ -24,7 +24,7 @@ export default function Register({ Education, Section, instructor, student }) {
       .then((auth) => {
         console.log(auth);
         if (auth) {
-          history.push("/");
+          history.push("/Classroom");
         }
       })
       .catch((error) => alert(error.message));
@@ -129,12 +129,12 @@ export default function Register({ Education, Section, instructor, student }) {
           <p className="already">
             Already registered
             {instructor && (
-              <Link to="/loginasInstructor" className="link-item">
+              <Link to="/Instructor" className="link-item">
                 Sign in
               </Link>
             )}
             {student && (
-              <Link to="/loginasStudent" className="link-item">
+              <Link to="/Student" className="link-item">
                 Sign in
               </Link>
             )}
