@@ -2,25 +2,34 @@ import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./components/Home";
-import Try from "./components/try";
 import Signup from "./components/Signup";
 import Signin from "./components/Signin";
 import Sidebar from "./components/Sidebar";
-import ClassNavBar from "./components/ClassNavBar";
-import Form from "./components/Form";
+import Form from "./components/Forms";
+
 
 
 function App() {
   console.log("Heya ");
   return (
-    <Router>
-      <Switch>
-        {/* <Route path="/SideDrawer" component={SideDrawer} /> */}
-        <Route path="/Signup" component={Signup} />
-        <Route path="/Signin" component={Signin} />
-        <Route path="/Sidebar" component={Sidebar} />
-        <Route path="/try" component={Try} />
-        <Route path="/form">
+     <Router>
+     <Switch>
+     <Route path='/loginasInstructor'>
+       <Signin Instructor={true} />
+     </Route>
+     <Route path='/loginasStudent'>
+       <Signin Student={true} />
+     </Route>
+     <Route path="/registerasainstructor">
+       <Signup Education={true} instructor={true} />
+     </Route>
+     <Route path="/registerasastudent">
+       <Signup Section={true} student={true} />
+     </Route>
+     <Route path="/Classroom">
+       <Sidebar SidebuttonTypeOne={true} SidebuttonTypeFive={true}/>
+     </Route>
+     <Route path="/form">
           <Form
           Sejal ={true}
            />
@@ -30,10 +39,11 @@ function App() {
           Parul ={true}
            />
         </Route>
-        <Route path="/ClassNavBar" component={ClassNavBar} />
-        <Route path="/" component={Home} />
-      </Switch>
-    </Router>
+      <Route path="/">
+        <Home/>
+      </Route>
+     </Switch>
+   </Router>
   );
 }
 
