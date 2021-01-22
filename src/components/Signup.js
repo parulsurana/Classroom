@@ -3,8 +3,8 @@ import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import Button from "./Button";
 import { useForm } from "react-hook-form";
+import { auth } from "../firebase";
 
-import background from "../Assets/mainImage.jpg";
 
 
 export default function Register({ Education, Section, instructor, student }) {
@@ -15,29 +15,27 @@ export default function Register({ Education, Section, instructor, student }) {
   const onSubmit = (data) => {
     console.log(data);
   };
+  const history = useHistory();
 
-  // const history = useHistory();
   // const [userName, setUserName] = useState("");
   // const [education, setEducation] = useState("");
-  // const [email, setEmail] = useState("");
-  // const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   // const [gender, setGender] = useState("");
   // const [section, setSection] = useState("");
 
-  // const signUp = e => {
-  //   e.preventDefault()
 
-  //   history.push('/home');
-  // }
+  const signUp = e => {
+    e.preventDefault()
+    
+    auth.createUserWithEmailAndPassword(email, password).then((auth) => { 
+      console.log(auth);
+      if(auth){
+        history.push('/')
+      }
+     }).catch(error => alert(error.message));
+  }
 
-  const onSubmit = (data) => {
-    console.log(data);
-  };
-
-
-
-  //   history.push('/')
-  // }
 
   return (
     <div className="register-page">
@@ -87,22 +85,16 @@ export default function Register({ Education, Section, instructor, student }) {
 
         <div className="user-box">
           {Education && <label>Education</label>}
-
           {Education && <input
             name="education"
             placeholder="Education"
             type="text"
             ref={register({required: true})}
-
             // value={education}
             // onChange={(e) => setEducation(e.target.value)}
           ></input>}
-        </div>
-
-
-              // value={education}
-              // onChange={(e) => setEducation(e.target.value)}
-            ></input>
+               value={education}
+               onChange={(e) => setEducation(e.target.value)}
           )}{" "}
           {errors.education && (
             <p className="error_message">Your education is required</p>
@@ -122,8 +114,9 @@ export default function Register({ Education, Section, instructor, student }) {
           {errors.section && (
             <p className="error_message">section is required</p>
           )}
-
         </div>
+
+
 
         <div className="user-box">
           <label>Email</label>
@@ -131,17 +124,16 @@ export default function Register({ Education, Section, instructor, student }) {
             name="email"
             placeholder="Email"
             type="email"
+            ref={register({ required: true })}
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
 
-            ref={register({required: true})}
-
-
-            // value={email}
-            // onChange={(e) => setEmail(e.target.value)}
           ></input>
           {errors.email && (
             <p className="error_message">Your email-id is required</p>
           )}
         </div>
+
 
         <div className="user-box">
           <label>Password</label>
@@ -150,22 +142,19 @@ export default function Register({ Education, Section, instructor, student }) {
             placeholder="Password"
             type="password"
 
-            ref={register({required: true})}
+            ref={register({ required: true })}
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
 
-
-            // value={password}
-            // onChange={(e) => setPassword(e.target.value)}
           ></input>
           {errors.password && (
             <p className="error_message">password is required</p>
           )}
         </div>
 
-
-        {/* onClick={signUp} */}
-        <div className="userSubmit">
+       
+        <div className="userSubmit"  onClick={signUp}>
           <Button buttonName="submit" label="Sign up" />
-
         </div>
 
         <div className="register__footer">
@@ -183,7 +172,10 @@ export default function Register({ Education, Section, instructor, student }) {
             )}
           </p>
         </div>
+
+
       </form>
+    </div>
     </div>
   );
 }
