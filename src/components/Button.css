@@ -62,5 +62,16 @@
   font-size: 110%;
 }
 
+.popupButton{
+  border: 2px solid black;
+  background-color: transparent;
+  color: black;
+  cursor: pointer;
+}
 
-
+.crossButton{
+  background-color: rgb(233, 101, 101);
+  color: black;
+  padding: 4px 10px;
+  cursor: pointer;
+}
