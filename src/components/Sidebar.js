@@ -4,7 +4,7 @@ import MenuIcon from "@material-ui/icons/Menu";
 import CloseIcon from "@material-ui/icons/Close";
 import logo from "../Assets/studyhunt.png";
 import "./Sidebar.css";
-import { Avatar, IconButton } from "@material-ui/core";
+import {IconButton } from "@material-ui/core";
 import Button from "./Button";
 import { SidebarData } from "./SidebarData";
 

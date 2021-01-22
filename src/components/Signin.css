@@ -5,17 +5,36 @@
 
 .login-page {
   text-align: center;
-  background-image: url("../Assets/pexels-polina-zimmerman-3747403-inverted.jpg");
+  background-image: url("../Assets/mainImage-inverted.jpg");
   height: 100vh;
   background-repeat: no-repeat;
   background-size: 100% 800px;
 }
 
-.login-box > h2 {
-  margin-bottom: 30px;
-  text-align: center;
-  color: blanchedalmond;
+.login__header{
+  padding: 13px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: whitesmoke;
+  font-size: 100px;
 }
+
+.login__footer{
+  padding: 13px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: whitesmoke;
+}
+
+.client__submit{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 13px;
+}
+
 
 .login-box {
   background-color: rgb(3, 3, 3, 0.8);

@@ -7,7 +7,7 @@
 .Home{
     text-align: center;
     background-image: linear-gradient(rgba(212, 209, 209, 0.5), rgba(0, 0.8, 0.8, 0.5)),
-      url("../Assets/pexels-polina-zimmerman-3747403.jpg");
+      url("../Assets/mainImage.jpg");
     height: 100vh;
     background-repeat: no-repeat;
     background-size: 100% 800px;
