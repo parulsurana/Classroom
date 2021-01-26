@@ -7,20 +7,33 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url("../Assets/mainImage.jpg");
   background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100%;
+  background-position: center center;
+  background-size: cover;
   height: 100vh;
+  background-attachment: fixed;
 }
 
-.lapiImage{
-  /* z-index: 1;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden; */
-  flex: 1;
+@media (max-width: 480px) {
+  .register-page {
+    background-image: url("../Assets/mainImage.jpg");
+  }
+}
 
+@media (min-width: 481px) and (max-width: 1024px) {
+  .register-page {
+    background-image: url("../Assets/mainImage.jpg");
+  }
+}
+
+@media (min-width: 1025px) {
+  .register-page {
+    background-image: url("../Assets/mainImage.jpg");
+  }
+}
+
+.lapiImage {
+  flex: 1.5;
 }
 
 .register-box {
@@ -28,7 +41,6 @@
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
   display: flex;
   flex-direction: column;
-  /* max-width: 500px; */
   padding-top: 40px;
   padding-right: 40px;
   padding-left: 40px;
@@ -36,16 +48,11 @@
   margin: auto;
   align-items: center;
   justify-content: center;
-  /* float: right; */
   flex: 0.5;
-  /* margin-top: 30px; */
-  /* margin-left: 50px; */
   margin-right: 70px;
-  /* margin-bottom: 30px; */
-  /* z-index: 999; */
 }
 
-.register__header{
+.register__header {
   padding: 13px;
   display: flex;
   justify-content: center;
@@ -53,7 +60,7 @@
   color: whitesmoke;
 }
 
-.register__footer{
+.register__footer {
   padding: 13px;
   display: flex;
   justify-content: center;
@@ -61,15 +68,14 @@
   color: whitesmoke;
 }
 
-.userSubmit{
+.userSubmit {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 13px;
-
 }
 
-.user-box{
+.user-box {
   margin: 10px;
 }
 
@@ -114,5 +120,4 @@
   color: #f40303;
   padding: 0%;
   text-align: end;
-  /* margin-bottom: 20px; */
 }

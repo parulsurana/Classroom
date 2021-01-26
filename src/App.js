@@ -1,5 +1,5 @@
-import React from 'react';
-import './App.css';
+import React from "react";
+import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./components/Home";
 import Signup from "./components/Signup";
@@ -7,43 +7,49 @@ import Signin from "./components/Signin";
 import Sidebar from "./components/Sidebar";
 import Form from "./components/Forms";
 
-
-
 function App() {
-  console.log("Heya ");
   return (
-     <Router>
-     <Switch>
-     <Route path='/loginasInstructor'>
-       <Signin Instructor={true} />
-     </Route>
-     <Route path='/loginasStudent'>
-       <Signin Student={true} />
-     </Route>
-     <Route path="/registerasainstructor">
-       <Signup Education={true} instructor={true} />
-     </Route>
-     <Route path="/registerasastudent">
-       <Signup Section={true} student={true} />
-     </Route>
-     <Route path="/Classroom">
-       <Sidebar SidebuttonTypeOne={true} SidebuttonTypeFive={true}/>
-     </Route>
-     <Route path="/form">
-          <Form
-          Sejal ={true}
-           />
+    <Router>
+      <Switch>
+        <Route path="/Instructor">
+          <Signin Instructor={true} />
+        </Route>
+        <Route path="/Student">
+          <Signin Student={true} />
+        </Route>
+        <Route path="/RegisterInstructor">
+          <Signup Education={true} instructor={true} />
+        </Route>
+        <Route path="/RegisterStudent">
+          <Signup Section={true} student={true} />
+        </Route>
+        <Route path="/AddClassroom">
+          <Sidebar SidebuttonTypeOne={true} SidebuttonTypeFive={true} />
+        </Route>
+        <Route path="/AddProjects">
+          <Sidebar SidebuttonTypeThree={true} SidebuttonTypeFive={true} />
+        </Route>
+        <Route path="/AddBooks">
+          <Sidebar SidebuttonTypeFour={true} SidebuttonTypeFive={true} />
+        </Route>
+        <Route path="/AddAssignments">
+          <Sidebar SidebuttonTypeTwo={true} SidebuttonTypeFive={true} />
+        </Route>
+
+        <Route path="/Classroom">
+        <Sidebar />
+        </Route>
+        <Route path="/form">
+          <Form Sejal={true} />
         </Route>
         <Route path="/forms">
-          <Form
-          Parul ={true}
-           />
+          <Form Parul={true} />
         </Route>
-      <Route path="/">
-        <Home/>
-      </Route>
-     </Switch>
-   </Router>
+        <Route path="/">
+          <Home />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 
