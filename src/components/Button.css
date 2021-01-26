@@ -70,8 +70,34 @@
 }
 
 .crossButton{
-  background-color: rgb(233, 101, 101);
-  color: black;
-  padding: 4px 10px;
+  /* background-color: #f46303; */
+  color: #f46303;
+  font-weight: bolder;
+  font-size: 100%;
+  padding: 3px 11px;
   cursor: pointer;
+  border-radius: 100px;
+  border: none;
+  outline-style: none;
+  background-color: transparent;
+}
+
+.add{
+  display: flex;
+  background-color: #f4511e;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 7px 10px;
+  opacity: 0.6;
+  transition: 0.3s;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.add:hover{
+  opacity: 1;
 }

@@ -1,9 +1,14 @@
-import React from 'react'
-export const GetDepartmentCollection = [
-    { id: '1', title: 'Development' },
-    { id: '2', title: 'Marketing' },
-    { id: '3', title: 'Accounting' },
-    { id: '4', title: 'HR' },
+export const GetSectionCollection = [
+    { id: '1', title: 'Class I' },
+    { id: '2', title: 'Class II' },
+    { id: '3', title: 'Class III' },
+    { id: '4', title: 'Class IV' },
+    { id: '5', title: 'Class V' },
+    { id: '6', title: 'Class VI' },
+    { id: '7', title: 'Class VII' },
+    { id: '8', title: 'Class VIII' },
+    { id: '9', title: 'Class IX' },
+    { id: '10', title: 'Class X' },
 ];
 
 export default function employeeServices(){

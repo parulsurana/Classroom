@@ -7,6 +7,8 @@ import "./Sidebar.css";
 import { IconButton } from "@material-ui/core";
 import Button from "./Button";
 import { SidebarData } from "./SidebarData";
+import Popup from "./Popup";
+import Form from "./Forms";
 
 export default function Sidebar({
   SidebuttonTypeOne,
@@ -16,8 +18,8 @@ export default function Sidebar({
   SidebuttonTypeFive,
 }) {
   const [sidebar, setSidebar] = useState(false);
-
   const showSidebar = () => setSidebar(!sidebar);
+  const [openPopup, setOpenPopup] = useState(false);
 
   return (
     <>
@@ -35,16 +37,72 @@ export default function Sidebar({
         </div>
         <div className="SideButton">
           {SidebuttonTypeOne && (
-            <Button buttonName="SidebuttonType" label="Create Class" />
+            <Button
+              buttonName="SidebuttonType"
+              label="Create Class"
+              onClick={() => setOpenPopup(true)}
+            />
+          )}
+          {SidebuttonTypeOne && (
+            <Popup
+              title="Create Class"
+              openPopup={openPopup}
+              setOpenPopup={setOpenPopup}
+            >
+              {" "}
+              <Form AddClassroom={true} />
+            </Popup>
           )}
           {SidebuttonTypeTwo && (
-            <Button buttonName="SidebuttonType" label="Add Assignment " />
+            <Button
+              buttonName="SidebuttonType"
+              label="Add Assignment "
+              onClick={() => setOpenPopup(true)}
+            />
+          )}
+          {SidebuttonTypeTwo && (
+            <Popup
+              title="Add Assignment"
+              openPopup={openPopup}
+              setOpenPopup={setOpenPopup}
+            >
+              {" "}
+              <Form Assignment={true} />
+            </Popup>
           )}
           {SidebuttonTypeThree && (
-            <Button buttonName="SidebuttonType" label="Add Project" />
+            <Button
+              buttonName="SidebuttonType"
+              label="Add Project"
+              onClick={() => setOpenPopup(true)}
+            />
+          )}
+          {SidebuttonTypeThree && (
+            <Popup
+              title="Add project"
+              openPopup={openPopup}
+              setOpenPopup={setOpenPopup}
+            >
+              {" "}
+              <Form Project={true} />
+            </Popup>
           )}
           {SidebuttonTypeFour && (
-            <Button buttonName="SidebuttonType" label="Add Books" />
+            <Button
+              buttonName="SidebuttonType"
+              label="Add Books"
+              onClick={() => setOpenPopup(true)}
+            />
+          )}
+          {SidebuttonTypeFour && (
+            <Popup
+              title="Add Books"
+              openPopup={openPopup}
+              setOpenPopup={setOpenPopup}
+            >
+              {" "}
+              <Form Book={true} />
+            </Popup>
           )}
           {SidebuttonTypeFive && (
             <Button buttonName="SidebuttonType" label="Update Profile " />
