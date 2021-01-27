@@ -5,7 +5,6 @@ import {
   makeStyles,
   Typography,
 } from "@material-ui/core";
-import { Autorenew } from "@material-ui/icons";
 import React from "react";
 import Button from "./Button";
 
