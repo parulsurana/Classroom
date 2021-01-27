@@ -1,4 +1,4 @@
-import { Grid } from "@material-ui/core";
+import { Grid, IconButton, InputLabel } from "@material-ui/core";
 import React from "react";
 import { UsableForm, Form } from "./usableForm";
 import Input from "./Input";
@@ -6,17 +6,12 @@ import Select from "./Select";
 import { GetSectionCollection } from "./Services";
 // import CheckBox from "./CheckBox";
 import DatePickers from "./DatePickers";
-import TextField from "@material-ui/core/TextField";
 import Button from "./Button";
 import employeeServices from "./Services";
 import Popup from "./Popup";
+import { PhotoCamera } from "@material-ui/icons";
+import "./Form.css";
 
-// const useStyles = makeStyles(theme => ({
-//         pageContent:{
-//             margin:theme.spacing(5),
-//             padding:theme.spacing(3)
-//         }
-// }))
 
 const initialValues = {
   id: 0,
@@ -151,8 +146,6 @@ export default function Forms({ AddClassroom, Project, Book, Assignment }) {
                 multiline
                 label="Features"
                 name="Features"
-                // type="text"
-                // fullWidth
                 value={values.Features}
                 onChange={handleInputChange}
                 error={errors.Features}
@@ -180,28 +173,41 @@ export default function Forms({ AddClassroom, Project, Book, Assignment }) {
               />
             )}
             {Book && (
-              <Input
+              <input
+                style={{
+                  fontSize: "20px",
+                  padding: "10px",
+                  outline: "none",
+                }}
                 variant="outlined"
                 label="Book Cover"
                 name="bookImage"
-                //   url={}
+                accept="image/*"
                 value={values.bookImage}
                 onChange={handleInputChange}
                 error={errors.bookImage}
+                type="file"
               />
             )}
             {Book && (
-              <Input
-                variant="outlined"
-                label="Upload Pdf"
-                name="filesuploaded"
-                type="url"
-                value={values.filesuploaded}
-                onChange={handleInputChange}
-                error={errors.filesuploaded}
-              />
+              <>
+                {" "}
+                <input
+                  style={{
+                    fontSize: "20px",
+                    padding: "10px",
+                    outline: "none",
+                  }}
+                  name="filesuploaded"
+                  value={values.filesuploaded}
+                  onChange={handleInputChange}
+                  error={errors.filesuploaded}
+                  id="icon-button-photo"
+                  placeholder="pdf"
+                  type="file"
+                />
+              </>
             )}
-
             {Assignment && (
               <Input
                 variant="outlined"
@@ -215,23 +221,32 @@ export default function Forms({ AddClassroom, Project, Book, Assignment }) {
             {Assignment && (
               <Input
                 variant="outlined"
+                id="outlined-textarea"
+                multiline
                 label="Instructions"
                 name="Instructions"
-                type="text"
                 value={values.Instructions}
                 onChange={handleInputChange}
                 error={errors.Instructions}
               />
             )}
             {Assignment && (
-              <Select
-                label="Section"
-                name="SectionId"
-                value={values.SectionId}
-                onChange={handleInputChange}
-                options={GetSectionCollection}
-                error={errors.SectionId}
-              />
+              <>
+                <input
+                  style={{
+                    fontSize: "20px",
+                    padding: "10px",
+                    outline: "none",
+                  }}
+                  variant="outlined"
+                  label="Assignment Pdf"
+                  name="AssignmentPdf"
+                  value={values.AssignmentPdf}
+                  onChange={handleInputChange}
+                  error={errors.AssignmentPdf}
+                  type="file"
+                />
+              </>
             )}
             <Button label="Submit" buttonName="add" />
           </Grid>
