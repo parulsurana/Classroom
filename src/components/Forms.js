@@ -1,69 +1,85 @@
 import { Grid, IconButton, InputLabel } from "@material-ui/core";
-import React from "react";
+import React, { useState } from "react";
 import { UsableForm, Form } from "./usableForm";
 import Input from "./Input";
 import Select from "./Select";
 import { GetSectionCollection } from "./Services";
-// import CheckBox from "./CheckBox";
 import DatePickers from "./DatePickers";
 import Button from "./Button";
 import employeeServices from "./Services";
 import Popup from "./Popup";
-import { PhotoCamera } from "@material-ui/icons";
 import "./Form.css";
+import { useForm } from "react-hook-form";
 
-
-const initialValues = {
-  id: 0,
-  ClassName: "",
-  ProjectName: "",
-  BookName: "",
-  AssignmentName: "",
-  Subject: "",
-  Section: "",
-  AuthorName: "",
-  Features: "",
-  //   gender: "female",
-  SectionId: "",
-  StartDate: new Date(),
-  EndDate: new Date(),
-  isPermanent: false,
-};
+// const initialValues = {
+//   id: 0,
+//   ClassName: "",
+//   ProjectName: "",
+//   BookName: "",
+//   AssignmentName: "",
+//   Subject: "",
+//   Section: "",
+//   AuthorName: "",
+//   Features: "",
+//   SectionId: "",
+//   StartDate: new Date(),
+//   EndDate: new Date(),
+//   isPermanent: false,
+// };
 
 export default function Forms({ AddClassroom, Project, Book, Assignment }) {
-  const validate = () => {
-    let temp = {};
-    temp.fullName = values.fullName ? "" : "This field is required";
-    temp.email = /$^|.*.@.*..*/.test(values.email) ? "" : "Email is not valid";
-    temp.mobile = values.mobile.length > 9 ? "" : "Minimun 10 numbers required";
-    temp.SectionId =
-      values.SectionId.length != 0 ? "" : "This field is required";
-    SetErrors({
-      ...temp,
-    });
+  //   const validate = () => {
+  //     let temp = {};
+  //     temp.fullName = values.fullName ? "" : "This field is required";
+  //     temp.email = /$^|.*.@.*..*/.test(values.email) ? "" : "Email is not valid";
+  //     temp.mobile = values.mobile.length > 9 ? "" : "Minimun 10 numbers required";
+  //     temp.SectionId =
+  //       values.SectionId.length != 0 ? "" : "This field is required";
+  //     SetErrors({
+  //       ...temp,
+  //     });
 
-    return Object.values(temp).every((x) => x == "");
+  //     return Object.values(temp).every((x) => x == "");
+  //   };
+
+  // const {
+  //   values,
+  //   setValues,
+  //   errors,
+  //   SetErrors,
+  //   handleInputChange,
+  // } = UsableForm(initialValues);
+
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   if (validate()) {
+  //     // employeeServices.insertEmployee(values);
+  //     console.log(values);
+  //   }
+  // };
+
+  const clickme = () => {
+    console.log(className);
   };
-
-  const {
-    values,
-    setValues,
-    errors,
-    SetErrors,
-    handleInputChange,
-  } = UsableForm(initialValues);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (validate()) {
-      employeeServices.insertEmployee(values);
-    }
-  };
+  const [className, setClassName] = useState("");
+  const [subject, setSubject] = useState("");
+  const [roomLink, setRoomLink] = useState("");
+  const [section, setSection] = useState("");
+  const [startDate, setStartDate] = useState("");
+  const [endDate, setEndDate] = useState("");
+  const [projectName, setProjectName] = useState("");
+  const [feature, setFeature] = useState("");
+  const [bookName, setBookName] = useState("");
+  const [authorName, setAuthorName] = useState("");
+  const [bookImage, setBookImage] = useState("");
+  const [bookPdf, setBookPdf] = useState("");
+  const [assignmentTitle, setAssignmentTitle] = useState("");
+  const [instruction, setInstruction] = useState("");
+  const [assignmentPdf, setAssignmentPdf] = useState("");
 
   return (
-    // <Paper className={classes.pageContent}>
     <>
-      <Form onSubmit={handleSubmit}>
+      <Form >
         <Grid container>
           <Grid item xs={12}>
             {AddClassroom && (
@@ -71,9 +87,10 @@ export default function Forms({ AddClassroom, Project, Book, Assignment }) {
                 variant="outlined"
                 label="Class Name"
                 name="ClassName"
-                value={values.ClassName}
-                onChange={handleInputChange}
-                error={errors.ClassName}
+                value={className}
+                // onChange={handleInputChange}
+                onChange={(e) => setClassName(e.target.value)}
+                // error={errors.ClassName}
               />
             )}
 
@@ -82,9 +99,11 @@ export default function Forms({ AddClassroom, Project, Book, Assignment }) {
                 variant="outlined"
                 label="Subject"
                 name="Subject"
-                value={values.Subject}
-                onChange={handleInputChange}
-                error={errors.Subject}
+                // value={values.Subject}
+                // onChange={handleInputChange}
+                // error={errors.Subject}
+                value={subject}
+                onChange={(e) => setSubject(e.target.value)}
               />
             )}
 
@@ -93,20 +112,24 @@ export default function Forms({ AddClassroom, Project, Book, Assignment }) {
                 variant="outlined"
                 label="Room Link"
                 name="RoomLink"
-                value={values.RoomLink}
-                onChange={handleInputChange}
-                error={errors.RoomLink}
+                // value={values.RoomLink}
+                // onChange={handleInputChange}
+                // error={errors.RoomLink}
+                value={roomLink}
+                onChange={(e) => setRoomLink(e.target.value)}
               />
             )}
 
             {AddClassroom && (
               <Select
                 label="Section"
-                name="SectionId"
-                value={values.SectionId}
-                onChange={handleInputChange}
+                name="Section"
+                // value={values.SectionId}
+                // onChange={handleInputChange}
                 options={GetSectionCollection}
-                error={errors.SectionId}
+                // error={errors.SectionId}
+                value={section}
+                onChange={(e) => setSection(e.target.value)}
               />
             )}
 
@@ -114,8 +137,10 @@ export default function Forms({ AddClassroom, Project, Book, Assignment }) {
               <DatePickers
                 label="Start Date"
                 name="StartDate"
-                value={values.StartDate}
-                onChange={handleInputChange}
+                // value={values.StartDate}
+                // onChange={handleInputChange}
+                value={startDate}
+                onChange={(e) => setStartDate(e.target.value)}
               />
             )}
 
@@ -123,8 +148,10 @@ export default function Forms({ AddClassroom, Project, Book, Assignment }) {
               <DatePickers
                 label="End Date"
                 name="EndDate"
-                value={values.EndDate}
-                onChange={handleInputChange}
+                // value={values.EndDate}
+                // onChange={handleInputChange}
+                value={endDate}
+                onChange={(e) => setEndDate(e.target.value)}
               />
             )}
 
@@ -133,9 +160,11 @@ export default function Forms({ AddClassroom, Project, Book, Assignment }) {
                 variant="outlined"
                 label="Project Name"
                 name="ProjectName"
-                value={values.ProjectName}
-                onChange={handleInputChange}
-                error={errors.ProjectName}
+                // value={values.ProjectName}
+                // onChange={handleInputChange}
+                // error={errors.ProjectName}
+                value={projectName}
+                onChange={(e) => setProjectName(e.target.value)}
               />
             )}
 
@@ -146,9 +175,11 @@ export default function Forms({ AddClassroom, Project, Book, Assignment }) {
                 multiline
                 label="Features"
                 name="Features"
-                value={values.Features}
-                onChange={handleInputChange}
-                error={errors.Features}
+                // value={values.Features}
+                // onChange={handleInputChange}
+                // error={errors.Features}
+                value={feature}
+                onChange={(e) => setFeature(e.target.value)}
               />
             )}
             {Book && (
@@ -156,9 +187,11 @@ export default function Forms({ AddClassroom, Project, Book, Assignment }) {
                 variant="outlined"
                 label="Book Name"
                 name="BookName"
-                value={values.BookName}
-                onChange={handleInputChange}
-                error={errors.BookName}
+                // value={values.BookName}
+                // onChange={handleInputChange}
+                // error={errors.BookName}
+                value={bookName}
+                onChange={(e) => setBookName(e.target.value)}
               />
             )}
 
@@ -167,9 +200,11 @@ export default function Forms({ AddClassroom, Project, Book, Assignment }) {
                 variant="outlined"
                 label="Author Name"
                 name="AuthorName"
-                value={values.AuthorName}
-                onChange={handleInputChange}
-                error={errors.AuthorName}
+                // value={values.AuthorName}
+                // onChange={handleInputChange}
+                // error={errors.AuthorName}
+                value={authorName}
+                onChange={(e) => setAuthorName(e.target.value)}
               />
             )}
             {Book && (
@@ -180,13 +215,14 @@ export default function Forms({ AddClassroom, Project, Book, Assignment }) {
                   outline: "none",
                 }}
                 variant="outlined"
-                label="Book Cover"
                 name="bookImage"
                 accept="image/*"
-                value={values.bookImage}
-                onChange={handleInputChange}
-                error={errors.bookImage}
+                // value={values.bookImage}
+                // onChange={handleInputChange}
+                // error={errors.bookImage}
                 type="file"
+                value={bookImage}
+                onChange={(e) => setBookImage(e.target.value)}
               />
             )}
             {Book && (
@@ -198,13 +234,15 @@ export default function Forms({ AddClassroom, Project, Book, Assignment }) {
                     padding: "10px",
                     outline: "none",
                   }}
-                  name="filesuploaded"
-                  value={values.filesuploaded}
-                  onChange={handleInputChange}
-                  error={errors.filesuploaded}
-                  id="icon-button-photo"
-                  placeholder="pdf"
+                  // name="filesuploaded"
+                  // value={values.filesuploaded}
+                  // onChange={handleInputChange}
+                  // error={errors.filesuploaded}
+                  variant="outlined"
                   type="file"
+                  name="bookPdf"
+                  value={bookPdf}
+                  onChange={(e) => setBookPdf(e.target.value)}
                 />
               </>
             )}
@@ -213,9 +251,11 @@ export default function Forms({ AddClassroom, Project, Book, Assignment }) {
                 variant="outlined"
                 label="Assignment Title"
                 name="AssignmentTitle"
-                value={values.AssignmentTitle}
-                onChange={handleInputChange}
-                error={errors.AssignmentTitle}
+                // value={values.AssignmentTitle}
+                // onChange={handleInputChange}
+                // error={errors.AssignmentTitle}
+                value={assignmentTitle}
+                onChange={(e) => setAssignmentTitle(e.target.value)}
               />
             )}
             {Assignment && (
@@ -225,9 +265,11 @@ export default function Forms({ AddClassroom, Project, Book, Assignment }) {
                 multiline
                 label="Instructions"
                 name="Instructions"
-                value={values.Instructions}
-                onChange={handleInputChange}
-                error={errors.Instructions}
+                // value={values.Instructions}
+                // onChange={handleInputChange}
+                // error={errors.Instructions}
+                value={instruction}
+                onChange={(e) => setInstruction(e.target.value)}
               />
             )}
             {Assignment && (
@@ -241,14 +283,16 @@ export default function Forms({ AddClassroom, Project, Book, Assignment }) {
                   variant="outlined"
                   label="Assignment Pdf"
                   name="AssignmentPdf"
-                  value={values.AssignmentPdf}
-                  onChange={handleInputChange}
-                  error={errors.AssignmentPdf}
+                  // value={values.AssignmentPdf}
+                  // onChange={handleInputChange}
+                  // error={errors.AssignmentPdf}
                   type="file"
+                  value={assignmentPdf}
+                  onChange={(e) => setAssignmentPdf(e.target.value)}
                 />
               </>
             )}
-            <Button label="Submit" buttonName="add" />
+            <Button label="Submit" buttonName="add" onClick={clickme}/>
           </Grid>
         </Grid>
       </Form>
