@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function try() {
+export default function Try() {
     return (
         <div>
             

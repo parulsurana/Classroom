@@ -7,10 +7,10 @@ export default function Card({title,ImageUrl,body}) {
             <div className="img-container">
                 <img src={ImageUrl} alt="" />
             </div>
-            <div className="card-title">
+            <div className="card_title">
                 <h2>{title}</h2>
             </div>
-            <div className="card-body">
+            <div className="card_body">
                 <p>{body}</p>
             </div>
         </div>
