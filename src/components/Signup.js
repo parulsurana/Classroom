@@ -7,7 +7,6 @@ import { auth } from "../firebase";
 
 export default function Register({ Education, Section, instructor, student }) {
   const { register, handleSubmit, errors, watch } = useForm();
-
   const onSubmit = (data) => {
     console.log(data);
   };
@@ -15,19 +14,18 @@ export default function Register({ Education, Section, instructor, student }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   // const [section, setSection] = useState("");
-
   const signUp = (e) => {
-    e.preventDefault();
+    e.preventDefault()
 
     auth
       .createUserWithEmailAndPassword(email, password)
       .then((auth) => {
         console.log(auth);
         if (auth) {
-          history.push("/Classroom");
+          history.push("/Classroom")
         }
       })
-      .catch((error) => alert(error.message));
+      .catch(error => alert(error.message))
   };
 
   return (

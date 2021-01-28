@@ -5,8 +5,6 @@ import Home from "./components/Home";
 import Signup from "./components/Signup";
 import Signin from "./components/Signin";
 import Sidebar from "./components/Sidebar";
-import Form from "./components/Forms";
-
 function App() {
   return (
     <Router>
@@ -35,15 +33,8 @@ function App() {
         <Route path="/AddAssignments">
           <Sidebar SidebuttonTypeTwo={true} SidebuttonTypeFive={true} />
         </Route>
-
         <Route path="/Classroom">
-        <Sidebar />
-        </Route>
-        <Route path="/form">
-          <Form Sejal={true} />
-        </Route>
-        <Route path="/forms">
-          <Form Parul={true} />
+          <Sidebar />
         </Route>
         <Route path="/">
           <Home />

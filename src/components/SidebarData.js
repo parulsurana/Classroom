@@ -7,7 +7,7 @@ import ClassIcon from "@material-ui/icons/Class";
 export const SidebarData = [
   {
     title: "Classroom",
-    path: "/Classroom",
+    path: "/AddClassroom",
     icon: <ClassIcon />,
     cName: "nav-text",
   },
