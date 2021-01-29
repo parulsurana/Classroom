@@ -1,5 +1,5 @@
 import { Grid, IconButton, InputLabel } from "@material-ui/core";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { UsableForm, Form } from "./usableForm";
 import Input from "./Input";
 import Select from "./Select";
@@ -10,22 +10,7 @@ import employeeServices from "./Services";
 import Popup from "./Popup";
 import "./Form.css";
 import { useForm } from "react-hook-form";
-
-// const initialValues = {
-//   id: 0,
-//   ClassName: "",
-//   ProjectName: "",
-//   BookName: "",
-//   AssignmentName: "",
-//   Subject: "",
-//   Section: "",
-//   AuthorName: "",
-//   Features: "",
-//   SectionId: "",
-//   StartDate: new Date(),
-//   EndDate: new Date(),
-//   isPermanent: false,
-// };
+import { DataUsageTwoTone } from "@material-ui/icons";
 
 export default function Forms({ AddClassroom, Project, Book, Assignment }) {
   //   const validate = () => {
@@ -58,8 +43,43 @@ export default function Forms({ AddClassroom, Project, Book, Assignment }) {
   //   }
   // };
 
-  const clickme = () => {
-    console.log(className);
+  // async componentDidMount() {
+  //   const url = "http://localhost:7000/info/";
+  //   const response = await fetch(url);
+  //   const data = await response.json();
+  //   console.log(data);
+  // }
+
+
+
+  const clickme = async () => {
+    try {
+      const result = await fetch("http://localhost:7000/info/", {
+        method: "post",
+        mode: "cors",
+        headers: {
+          "Accept": "application/json",
+          "Content-type": "application/json",
+        },
+        body: JSON.stringify({
+          classname: `${className}`,
+          subject: `${subject}`,
+          roomlink: `${roomLink}`,
+          section: `${section}`,
+          startDate: `${startDate}`,
+          endDate: `${endDate}`
+    //       classname: "lecture",
+    // subject: "hindi",
+    // roomlink: "augh-jkl",
+    // section: "class I",
+    // startDate: "11/02/21",
+    // endDate: "13/02/21"
+        })
+      });
+      console.log("Result:" + result)
+    } catch (e) {
+      console.log(e)
+    } 
   };
   const [className, setClassName] = useState("");
   const [subject, setSubject] = useState("");
@@ -79,7 +99,7 @@ export default function Forms({ AddClassroom, Project, Book, Assignment }) {
 
   return (
     <>
-      <Form >
+      <Form>
         <Grid container>
           <Grid item xs={12}>
             {AddClassroom && (
