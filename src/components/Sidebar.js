@@ -16,6 +16,8 @@ export default function Sidebar({
   SidebuttonTypeThree,
   SidebuttonTypeFour,
   SidebuttonTypeFive,
+  Menuicon,
+  sideMenu
 }) {
   const [sidebar, setSidebar] = useState(false);
   const showSidebar = () => setSidebar(!sidebar);
@@ -25,11 +27,11 @@ export default function Sidebar({
     <>
       <div className="navbar">
         <div className="navbar-left">
-          <Link to="#" className="menu-bars">
+          {Menuicon && (<Link to="#" className="menu-bars">
             <IconButton>
               <MenuIcon onClick={showSidebar} />
             </IconButton>
-          </Link>
+          </Link>)}
           <Link to="/">
             {" "}
             <img className="navbar-left_logo" src={logo} alt="logo" />
@@ -110,7 +112,7 @@ export default function Sidebar({
         </div>
       </div>
 
-      <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
+      {sideMenu && (<nav className={sidebar ? "nav-menu active" : "nav-menu"}>
         <ul className="nav-menu-items" onClick={showSidebar}>
           <li className="navbar-toggle">
             <Link to="#" className="menu-bars">
@@ -130,7 +132,7 @@ export default function Sidebar({
             );
           })}
         </ul>
-      </nav>
+      </nav>)}
     </>
   );
 }
