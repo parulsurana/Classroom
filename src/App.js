@@ -7,6 +7,8 @@ import Signin from "./components/Signin";
 import Sidebar from "./components/Sidebar";
 import Card from "./components/Card";
 import AddClassroom from "./AddClassroom";
+
+
 function App() {
   return (
     <Router>
@@ -50,5 +52,6 @@ function App() {
     </Router>
   );
 }
+
 
 export default App;
