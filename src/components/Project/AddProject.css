@@ -1,0 +1,18 @@
+/* .AddClassroom_body{
+    display: flex;
+    flex-direction: row;
+} */
+
+.AddProject{
+  background-image: url('https://github.com/parulsurana/Classroom/blob/master/src/Assets/4853433%20(1).jpg?raw=true');
+  background-repeat: no-repeat;
+  background-size: cover;
+} 
+
+.AddProject_item{
+    display: grid;
+    grid-template-columns: auto auto auto ;
+  grid-template-rows: auto ;
+    /* grid-template-columns: auto 100px 1fr 2fr; */
+
+}

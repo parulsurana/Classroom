@@ -25,7 +25,7 @@
   border-radius: 4px;
   border: none;
   padding: 10px 16px;
-  color: #f46303;
+  color: #DDC772;
   font-size: 18px;
   text-decoration: none;
   text-transform: uppercase;
@@ -43,7 +43,7 @@
 }
 
 .SidebuttonType{
-  background-color: rgb(172, 161, 161);
+  background-color: transparent;
   color: whitesmoke;
   transition: 0.5s;
   width: 150px;
@@ -58,8 +58,10 @@
 
 .SidebuttonType:hover{
   background-color: transparent;
-  color: rgb(2, 2, 2);
+  color: #fff;
   font-size: 110%;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .popupButton{

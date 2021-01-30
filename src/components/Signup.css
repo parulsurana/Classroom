@@ -57,7 +57,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: whitesmoke;
+  color: #DDC772;
 }
 
 .register__footer {
@@ -65,7 +65,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: whitesmoke;
+  color: #DDC772;
 }
 
 .userSubmit {
@@ -95,7 +95,7 @@
 .user-box > label {
   display: flex;
   text-align: start;
-  color: #f46f03;
+  color: #DDC772;
   padding-bottom: 5px;
 }
 
@@ -107,7 +107,7 @@
 
 .link-item {
   text-decoration: none;
-  color: #f46303;
+  color: #DDC772;
   font-size: 20px;
   padding-left: 6px;
 }
