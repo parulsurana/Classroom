@@ -8,12 +8,15 @@ import Sidebar from "./components/Sidebar";
 import AddClassroom from "./components/Classroom/AddClassroom";
 import AddProject from "./components/Project/AddProject";
 import AddBook from "./components/Book/AddBook";
-import BookCard from "./components/Book/BookCard";
+import ProjectCard from "./components/Project/ProjectCard";
 
 function App() {
   return (
     <Router>
       <Switch>
+      <Route path="/ProjectCard">
+        <ProjectCard />
+      </Route>
         <Route path="/Instructor">
           <Signin Instructor={true} />
         </Route>
@@ -34,7 +37,6 @@ function App() {
         </Route>
         <Route path="/AddBooks">
           <AddBook />
-          <BookCard/>
         </Route>
         <Route path="/AddAssignments">
           <Sidebar SidebuttonTypeTwo={true} SidebuttonTypeFive={true} />

@@ -19,7 +19,7 @@ function BookCard({ bookTitle, bookDescription }) {
             {" "}
           </h1>{" "}
           <p className="blog_postText">
-           {bookDescription}{" "}
+            {bookDescription}{" "}
           </p>{" "}
           <Button buttonName="download" label="Download"></Button>
         </div>{" "}
