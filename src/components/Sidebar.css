@@ -39,6 +39,7 @@
 .nav-menu {
   background-color: #c4c3c3;
   width: 300px;
+  z-index: 999;
   height: 100vh;
   display: flex;
   justify-content: center;
