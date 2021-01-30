@@ -8,8 +8,12 @@ import Sidebar from "./components/Sidebar";
 import AddClassroom from "./components/Classroom/AddClassroom";
 import AddProject from "./components/Project/AddProject";
 import AddBook from "./components/Book/AddBook";
+<<<<<<< HEAD
 import ProjectCard from "./components/Project/ProjectCard";
 
+=======
+import BookCard from "./components/Book/BookCard";
+>>>>>>> d0ac5d1fe992a2554bfe5d57aa265864cf1a74cf
 
 function App() {
   return (
@@ -37,10 +41,15 @@ function App() {
           <AddProject />
         </Route>
         <Route path="/AddBooks">
-        <AddBook />
+          <AddBook />
+          <BookCard/>
         </Route>
         <Route path="/AddAssignments">
           <Sidebar SidebuttonTypeTwo={true} SidebuttonTypeFive={true} />
+        </Route>
+        <Route path="/Classroom">
+          {/* <Sidebar /> */}
+          <AddClassroom />
         </Route>
         <Route path="/">
           <Home />
@@ -49,6 +58,5 @@ function App() {
     </Router>
   );
 }
-
 
 export default App;

@@ -103,3 +103,32 @@
 .add:hover{
   opacity: 1;
 }
+
+.download{
+  background: #071e2e;
+  background-image: -webkit-linear-gradient(top, #071e2e, #396096);
+  background-image: -moz-linear-gradient(top, #071e2e, #396096);
+  background-image: -ms-linear-gradient(top, #071e2e, #396096);
+  background-image: -o-linear-gradient(top, #071e2e, #396096);
+  background-image: linear-gradient(to bottom, #071e2e, #396096);
+  -webkit-border-radius: 5;
+  -moz-border-radius: 5;
+  border-radius: 5px;
+  font-family: Georgia;
+  color: #ffffff;
+  font-size: 19px;
+  border: none;
+  outline: none;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.download:hover {
+  background: #8d9fc4;
+  background-image: -webkit-linear-gradient(top, #8d9fc4, #436f8c);
+  background-image: -moz-linear-gradient(top, #8d9fc4, #436f8c);
+  background-image: -ms-linear-gradient(top, #8d9fc4, #436f8c);
+  background-image: -o-linear-gradient(top, #8d9fc4, #436f8c);
+  background-image: linear-gradient(to bottom, #8d9fc4, #436f8c);
+  text-decoration: none;
+}
