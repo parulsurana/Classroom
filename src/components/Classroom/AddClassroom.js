@@ -6,12 +6,12 @@ import { setISODay } from "date-fns";
 
 export default function AddClassroom() {
 
-  const CardClick = async () => {
-    try {
-      const result = await fetch("http://localhost:7000/info/:id")
-    } catch (e) {
-      console.log(e)
-    } 
+  const CardClick = async (cards) => {
+      const url = "http://localhost:7000/info/"+cards;
+      const response = await fetch(url);
+      const dataa = await response.json();
+      console.log(dataa);
+
   };
 
   const [create, setCreate] = useState([]);
@@ -36,7 +36,7 @@ export default function AddClassroom() {
       </div>
       <div className="AddClassroom_item">
         {create.map((creates) => (
-          <div key={creates.id} onClick={CardClick} >
+          <div key={creates.id} onClick={() => CardClick(creates._id)} >
             <Card 
               title={creates.classname}
               ImageUrl={"https://etimg.etb2bimg.com/photo/75729614.cms"}

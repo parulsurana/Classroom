@@ -28,7 +28,7 @@ export default function AddClassroom() {
           <div key={books.id}>
             <Card
               title={books.bookimage}
-              ImageUrl={"https://etimg.etb2bimg.com/photo/75729614.cms"}
+              ImageUrl={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHA_MX2ITfOxFaGkry7zWdqqjz8GtIm7kSbQ&usqp=CAU"}
               body={books.authorname}
             />
           </div>

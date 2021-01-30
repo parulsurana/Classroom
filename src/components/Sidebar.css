@@ -4,8 +4,9 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  background-color: #f9813a;
+  background-color: #123;
   box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.5);
+  position: fixed;
 
 }
 
@@ -21,9 +22,9 @@
   width: 240px;
 }
 
-.menu-bars > .MuiSvgIcon-root {
-  color: grey;
-}
+/* .menu-bars > .MuiSvgIcon-root {
+  color: #fff;
+} */
 
 .menu-bars {
   margin-top: 0;
