@@ -1,0 +1,88 @@
+.main {
+    margin-top: 20px;
+}
+
+.main__wrapper {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 2 * 1.5rem);
+    max-width: 62.5rem;
+}
+
+.main__content {
+    background-color: #1967d2;
+    border-radius: 0.5rem;
+    margin-top: 1.5rem;
+    overflow: hidden;
+}
+
+.main__wrapper1 {
+    height: 15rem;
+    position: relative;
+    width: 100%;
+}
+
+.main__bgImage {
+    background-image: url("https://github.com/parulsurana/Classroom/blob/master/src/Assets/hey.jpg?raw=true");
+    background-size: cover;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.main__emptyStyles {
+    display: block;
+    height: 100%;
+    left: 0;
+    opacity: 0.8;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-image: radial-gradient(25rem 18.75rem ellipse at bottom right,
+            #4285f4,
+            transparent);
+}
+
+.main__text {
+    position: relative;
+    padding: 1.5rem;
+}
+
+.main__heading {
+    font-family: "Google Sans", Roboto, Arial, sans-serif;
+    font-size: 2.25rem;
+    font-weight: 500;
+    line-height: 2.75rem;
+    color: #fff;
+
+    margin: 0;
+}
+
+.main__overflow {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    display: block;
+}
+
+.main__section {
+    font-family: "Google Sans", Roboto, Arial, sans-serif;
+    font-size: 1.375rem;
+    font-weight: 400;
+    line-height: 1.75rem;
+    color: #fff;
+}
+
+.main__wrapper2 {
+    color: #fff;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+}
+
+.main__code {
+    font-weight: 500;
+    font-style: normal;
+}

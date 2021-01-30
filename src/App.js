@@ -8,6 +8,10 @@ import Sidebar from "./components/Sidebar";
 import AddClassroom from "./components/Classroom/AddClassroom";
 import AddProject from "./components/Project/AddProject";
 import AddBook from "./components/Book/AddBook";
+import Class from "./components/Classroom/Class";
+import Classroom from "../src/components/Student/Classroom";
+import Project from "../src/components/Student/Project";
+import Book from "../src/components/Student/Book";
 
 function App() {
   return (
@@ -38,13 +42,16 @@ function App() {
           <Sidebar SidebuttonTypeTwo={true} SidebuttonTypeFive={true} />
         </Route>
         <Route path="/Classroom">
-
+           <Classroom />
         </Route>
         <Route path="/Projects">
-
+           <Project/>
         </Route>
         <Route path="/Books">
-          
+          <Book/>
+        </Route>
+        <Route path="/Assignments">
+           <Class/>
         </Route>
         <Route path="/">
           <Home />
