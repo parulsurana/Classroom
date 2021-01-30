@@ -7,6 +7,7 @@ import Signin from "./components/Signin";
 import Sidebar from "./components/Sidebar";
 import Card from "./components/Card";
 import AddClassroom from "./AddClassroom";
+import BookCard from "./components/BookCard";
 function App() {
   return (
     <Router>
@@ -38,8 +39,10 @@ function App() {
         </Route>
         <Route path="/AddAssignments">
           <Sidebar SidebuttonTypeTwo={true} SidebuttonTypeFive={true} />
+          <BookCard/>
         </Route>
         <Route path="/Classroom">
+
           {/* <Sidebar /> */}
           <AddClassroom/>
         </Route>
