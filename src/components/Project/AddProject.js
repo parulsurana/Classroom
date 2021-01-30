@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import Sidebar from "../Sidebar";
-import Card from "../Card";
 import "./AddProject.css";
 import ProjectCard from "./ProjectCard";
 

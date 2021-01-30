@@ -1,83 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Potta+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Potta+One&family=Roboto:ital@1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins,wght@1,500&display=swap");
+
 *,
 *::before,
-*::after{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Roboito", sans-serif;
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-
-.bookCard{
-    top: 0;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #eee;
-    padding: 0 15rem;
+img {
+  width: 100%;
 }
 
-.blog_post{
-    width: 100%;
-    max-width: 50rem;
-    height: 50%;
-    padding: 3rem;
-    background-color: #eee;
-    box-shadow: 0 1.4rem 8rem rgba(0,0,0,0.2);
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    border-radius: 3rem;
-    position: relative;
+.blog_post {
+  width: 70%;
+  min-width: 200px;
+  padding: 5rem;
+  height: 300px;
+  background-color: #eee;
+  box-shadow: 0 1.4rem 8rem rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  border-radius: 0.8rem;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
-.blog_postImg{
-    width: 100%;
-    margin-top: 10rem;
-    min-width: 30rem;
-    max-width: 30rem;
-    height: 25rem;
-    transform: translateX(-6rem);
-    position: relative;
+.blog_postImg img {
+  width: 400px;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+  border-radius: 0.8rem;
+  transform: translateX(-8rem);
+  box-shadow: 0.5rem 0.5rem 3rem 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0.8rem;
 }
 
-.blog_postImg img{
-    width: 60%;
-    height: 60%;
-    object-fit: cover;
-    display: block;
-    border-radius: .8rem;
+.blog_postInfo {
+  margin-top: 30px 0;
 }
 
-.blog_postImg::before{
-    content: "";
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    /* background: linear-gradient(to right, rgba(79, 172, 254, .8), rgba(0,242,254,.8)); */
-    border-radius: .8rem;
-}
-.bookCard .blog_post .blog_postInfo{
-    display: inline-block;
-    margin-left: 0;
+.blog_postTitle {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  color: rgba(21, 60, 99, 0.8);
+  font-family: "Potta One", cursive;
 }
 
-
-.blog_postTitle{
-    font-size: 2.5rem;
-    margin: 1.5rem 0 2rem;
-    text-transform: uppercase;
-    color: #4facfe;
+.blog_postText {
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  color: rgb(32, 43, 54);
+  font-family: "Poppins", sans-serif;
+  font-weight: normal;
 }
-
-.blog_postText{
-    margin-bottom: 3rem;
-    font-size: 1.4rem;
-    color: rgba(0,0,0,0.7);
-}
-
-
