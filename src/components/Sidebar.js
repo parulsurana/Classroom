@@ -29,7 +29,7 @@ export default function Sidebar({
         <div className="navbar-left">
           {Menuicon && (<Link to="#" className="menu-bars">
             <IconButton>
-              <MenuIcon onClick={showSidebar} />
+              <MenuIcon onClick={showSidebar} style={{fill: "#fff"}} />
             </IconButton>
           </Link>)}
           <Link to="/">
@@ -52,7 +52,7 @@ export default function Sidebar({
               setOpenPopup={setOpenPopup}
             >
               {" "}
-              <Form AddClassroom={true} />
+              <Form AddClassroom={true} Buttonone={true}/>
             </Popup>
           )}
           {SidebuttonTypeTwo && (
@@ -86,7 +86,7 @@ export default function Sidebar({
               setOpenPopup={setOpenPopup}
             >
               {" "}
-              <Form Project={true} />
+              <Form Project={true} Buttontwo={true} />
             </Popup>
           )}
           {SidebuttonTypeFour && (
@@ -103,7 +103,7 @@ export default function Sidebar({
               setOpenPopup={setOpenPopup}
             >
               {" "}
-              <Form Book={true} />
+              <Form Book={true} Buttonthree={true} />
             </Popup>
           )}
           {SidebuttonTypeFive && (

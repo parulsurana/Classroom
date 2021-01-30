@@ -1,10 +1,19 @@
 import React, { useEffect, useState } from "react";
-import Sidebar from "./components/Sidebar";
-import Card from "./components/Card";
+import Sidebar from "../Sidebar";
+import Card from "../Card";
 import "./AddClassroom.css";
-import { Grid } from "@material-ui/core";
+import { setISODay } from "date-fns";
 
 export default function AddClassroom() {
+
+  const CardClick = async (cards) => {
+      const url = "http://localhost:7000/info/"+cards;
+      const response = await fetch(url);
+      const dataa = await response.json();
+      console.log(dataa);
+
+  };
+
   const [create, setCreate] = useState([]);
 
   useEffect(() => {
@@ -18,6 +27,8 @@ export default function AddClassroom() {
     fetchData();
   }, []);
 
+
+
   return (
     <div className="AddClassroom">
       <div className="AddClassroom_header">
@@ -25,8 +36,8 @@ export default function AddClassroom() {
       </div>
       <div className="AddClassroom_item">
         {create.map((creates) => (
-          <div key={creates.id}>
-            <Card
+          <div key={creates.id} onClick={() => CardClick(creates._id)} >
+            <Card 
               title={creates.classname}
               ImageUrl={"https://etimg.etb2bimg.com/photo/75729614.cms"}
               body={creates.subject}
