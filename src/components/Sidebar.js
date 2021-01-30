@@ -29,7 +29,7 @@ export default function Sidebar({
         <div className="navbar-left">
           {Menuicon && (<Link to="#" className="menu-bars">
             <IconButton>
-              <MenuIcon onClick={showSidebar} />
+              <MenuIcon onClick={showSidebar} style={{fill: "#fff"}} />
             </IconButton>
           </Link>)}
           <Link to="/">

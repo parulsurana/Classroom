@@ -30,7 +30,7 @@ export default function Class() {
 
     return (
         <div>
-       <Card Onclick = {CardClick}
+       <Card
               title={classname}
               ImageUrl={"https://etimg.etb2bimg.com/photo/75729614.cms"}
               body={subject}
