@@ -1,8 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Potta+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Potta+One&family=Roboto:ital@1&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins,wght@1,500&display=swap');
-
-
+@import url("https://fonts.googleapis.com/css2?family=Potta+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Potta+One&family=Roboto:ital@1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins,wght@1,500&display=swap");
 
 *,
 *::before,
@@ -12,23 +10,9 @@
   box-sizing: border-box;
 }
 
-.bookCard {
-  /* font-family: "Roboito", sans-serif;
-  font-size: 10px; */
-}
-
 img {
   width: 100%;
 }
-
-/* .bookCard_body {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 1.5rem;
-} */
 
 .blog_post {
   width: 70%;
@@ -45,7 +29,6 @@ img {
   margin-bottom: 50px;
 }
 
-
 .blog_postImg img {
   width: 400px;
   height: 250px;
@@ -57,10 +40,8 @@ img {
   border-radius: 0.8rem;
 }
 
-
-
-.blog_postInfo{
-    margin-top: 30px 0;
+.blog_postInfo {
+  margin-top: 30px 0;
 }
 
 .blog_postTitle {
@@ -68,13 +49,13 @@ img {
   margin-bottom: 0.5rem;
   text-transform: uppercase;
   color: rgba(21, 60, 99, 0.8);
-  font-family: 'Potta One', cursive;
+  font-family: "Potta One", cursive;
 }
 
 .blog_postText {
   margin-bottom: 1rem;
   font-size: 1.8rem;
   color: rgb(32, 43, 54);
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: normal;
 }
