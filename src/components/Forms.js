@@ -12,7 +12,7 @@ import "./Form.css";
 import { useForm } from "react-hook-form";
 import { DataUsageTwoTone } from "@material-ui/icons";
 
-export default function Forms({ AddClassroom, Project, Book, Assignment }) {
+export default function Forms({ AddClassroom, Project, Book, Assignment, Buttonone, Buttontwo, Buttonthree }) {
   //   const validate = () => {
   //     let temp = {};
   //     temp.fullName = values.fullName ? "" : "This field is required";
@@ -43,16 +43,11 @@ export default function Forms({ AddClassroom, Project, Book, Assignment }) {
   //   }
   // };
 
-  // async componentDidMount() {
-  //   const url = "http://localhost:7000/info/";
-  //   const response = await fetch(url);
-  //   const data = await response.json();
-  //   console.log(data);
-  // }
+ 
 
 
 
-  const clickme = async () => {
+  const clickmeone = async () => {
     try {
       const result = await fetch("http://localhost:7000/info/", {
         method: "post",
@@ -68,12 +63,46 @@ export default function Forms({ AddClassroom, Project, Book, Assignment }) {
           section: `${section}`,
           startDate: `${startDate}`,
           endDate: `${endDate}`
-    //       classname: "lecture",
-    // subject: "hindi",
-    // roomlink: "augh-jkl",
-    // section: "class I",
-    // startDate: "11/02/21",
-    // endDate: "13/02/21"
+        })
+      });
+      console.log("Result:" + result)
+    } catch (e) {
+      console.log(e)
+    } 
+  };
+  const clickmetwo = async () => {
+    try {
+      const result = await fetch("http://localhost:7000/project/", {
+        method: "post",
+        mode: "cors",
+        headers: {
+          "Accept": "application/json",
+          "Content-type": "application/json",
+        },
+        body: JSON.stringify({
+          projectname: `${projectName}`,
+          features: `${feature}`,
+        })
+      });
+      console.log("Result:" + result)
+    } catch (e) {
+      console.log(e)
+    } 
+  };
+  const clickmethree = async () => {
+    try {
+      const result = await fetch("http://localhost:7000/book/", {
+        method: "post",
+        mode: "cors",
+        headers: {
+          "Accept": "application/json",
+          "Content-type": "application/json",
+        },
+        body: JSON.stringify({
+          bookname: `${bookName}`,
+          authorname: `${authorName}`,
+          bookimage: `${bookImage}`,
+          bookpdf: `${bookPdf}`,
         })
       });
       console.log("Result:" + result)
@@ -108,7 +137,6 @@ export default function Forms({ AddClassroom, Project, Book, Assignment }) {
                 label="Class Name"
                 name="ClassName"
                 value={className}
-                // onChange={handleInputChange}
                 onChange={(e) => setClassName(e.target.value)}
                 // error={errors.ClassName}
               />
@@ -119,9 +147,7 @@ export default function Forms({ AddClassroom, Project, Book, Assignment }) {
                 variant="outlined"
                 label="Subject"
                 name="Subject"
-                // value={values.Subject}
-                // onChange={handleInputChange}
-                // error={errors.Subject}
+                  // error={errors.Subject}
                 value={subject}
                 onChange={(e) => setSubject(e.target.value)}
               />
@@ -132,8 +158,6 @@ export default function Forms({ AddClassroom, Project, Book, Assignment }) {
                 variant="outlined"
                 label="Room Link"
                 name="RoomLink"
-                // value={values.RoomLink}
-                // onChange={handleInputChange}
                 // error={errors.RoomLink}
                 value={roomLink}
                 onChange={(e) => setRoomLink(e.target.value)}
@@ -144,8 +168,6 @@ export default function Forms({ AddClassroom, Project, Book, Assignment }) {
               <Select
                 label="Section"
                 name="Section"
-                // value={values.SectionId}
-                // onChange={handleInputChange}
                 options={GetSectionCollection}
                 // error={errors.SectionId}
                 value={section}
@@ -157,8 +179,6 @@ export default function Forms({ AddClassroom, Project, Book, Assignment }) {
               <DatePickers
                 label="Start Date"
                 name="StartDate"
-                // value={values.StartDate}
-                // onChange={handleInputChange}
                 value={startDate}
                 onChange={(e) => setStartDate(e.target.value)}
               />
@@ -168,8 +188,6 @@ export default function Forms({ AddClassroom, Project, Book, Assignment }) {
               <DatePickers
                 label="End Date"
                 name="EndDate"
-                // value={values.EndDate}
-                // onChange={handleInputChange}
                 value={endDate}
                 onChange={(e) => setEndDate(e.target.value)}
               />
@@ -180,8 +198,6 @@ export default function Forms({ AddClassroom, Project, Book, Assignment }) {
                 variant="outlined"
                 label="Project Name"
                 name="ProjectName"
-                // value={values.ProjectName}
-                // onChange={handleInputChange}
                 // error={errors.ProjectName}
                 value={projectName}
                 onChange={(e) => setProjectName(e.target.value)}
@@ -195,8 +211,6 @@ export default function Forms({ AddClassroom, Project, Book, Assignment }) {
                 multiline
                 label="Features"
                 name="Features"
-                // value={values.Features}
-                // onChange={handleInputChange}
                 // error={errors.Features}
                 value={feature}
                 onChange={(e) => setFeature(e.target.value)}
@@ -207,8 +221,6 @@ export default function Forms({ AddClassroom, Project, Book, Assignment }) {
                 variant="outlined"
                 label="Book Name"
                 name="BookName"
-                // value={values.BookName}
-                // onChange={handleInputChange}
                 // error={errors.BookName}
                 value={bookName}
                 onChange={(e) => setBookName(e.target.value)}
@@ -220,8 +232,6 @@ export default function Forms({ AddClassroom, Project, Book, Assignment }) {
                 variant="outlined"
                 label="Author Name"
                 name="AuthorName"
-                // value={values.AuthorName}
-                // onChange={handleInputChange}
                 // error={errors.AuthorName}
                 value={authorName}
                 onChange={(e) => setAuthorName(e.target.value)}
@@ -237,8 +247,6 @@ export default function Forms({ AddClassroom, Project, Book, Assignment }) {
                 variant="outlined"
                 name="bookImage"
                 accept="image/*"
-                // value={values.bookImage}
-                // onChange={handleInputChange}
                 // error={errors.bookImage}
                 type="file"
                 value={bookImage}
@@ -254,9 +262,6 @@ export default function Forms({ AddClassroom, Project, Book, Assignment }) {
                     padding: "10px",
                     outline: "none",
                   }}
-                  // name="filesuploaded"
-                  // value={values.filesuploaded}
-                  // onChange={handleInputChange}
                   // error={errors.filesuploaded}
                   variant="outlined"
                   type="file"
@@ -271,8 +276,6 @@ export default function Forms({ AddClassroom, Project, Book, Assignment }) {
                 variant="outlined"
                 label="Assignment Title"
                 name="AssignmentTitle"
-                // value={values.AssignmentTitle}
-                // onChange={handleInputChange}
                 // error={errors.AssignmentTitle}
                 value={assignmentTitle}
                 onChange={(e) => setAssignmentTitle(e.target.value)}
@@ -285,8 +288,6 @@ export default function Forms({ AddClassroom, Project, Book, Assignment }) {
                 multiline
                 label="Instructions"
                 name="Instructions"
-                // value={values.Instructions}
-                // onChange={handleInputChange}
                 // error={errors.Instructions}
                 value={instruction}
                 onChange={(e) => setInstruction(e.target.value)}
@@ -303,8 +304,6 @@ export default function Forms({ AddClassroom, Project, Book, Assignment }) {
                   variant="outlined"
                   label="Assignment Pdf"
                   name="AssignmentPdf"
-                  // value={values.AssignmentPdf}
-                  // onChange={handleInputChange}
                   // error={errors.AssignmentPdf}
                   type="file"
                   value={assignmentPdf}
@@ -312,49 +311,15 @@ export default function Forms({ AddClassroom, Project, Book, Assignment }) {
                 />
               </>
             )}
-            <Button label="Submit" buttonName="add" onClick={clickme}/>
+           {Buttonone && (< Button label="Submit" buttonName="add" onClick={clickmeone}/>)}
+           {Buttontwo && < Button label="Submit" buttonName="add" onClick={clickmetwo}/>}
+           {Buttonthree && < Button label="Submit" buttonName="add" onClick={clickmethree}/>}
           </Grid>
         </Grid>
       </Form>
-      {/* </Popup> */}
+
     </>
-    // </Paper>
+  
   );
 }
 
-// eslint-disable-next-line no-lone-blocks
-{
-  /* {AddClassroom && (
-                <Input
-                  variant="outlined"
-                  label="Email"
-                  name="email"
-                  value={values.email}
-                  onChange={handleInputChange}
-                  error={errors.email}
-                />
-              )} */
-}
-// eslint-disable-next-line no-lone-blocks
-{
-  /* {Parul && (
-                <Input
-                  variant="outlined"
-                  label="Mobile"
-                  name="mobile"
-                  value={values.mobile}
-                  onChange={handleInputChange}
-                  error={errors.mobile}
-                />
-              )} */
-}
-
-// eslint-disable-next-line no-lone-blocks
-{
-  /* <CheckBox
-                label="Permanent"
-                name="isPermanent"
-                value={values.isPermanent}
-                onChange={handleInputChange}
-              /> */
-}
