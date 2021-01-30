@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./components/Home";
 import Signup from "./components/Signup";
 import Signin from "./components/Signin";
-import Sidebar from "./components/Sidebar";
 import AddClassroom from "./components/Classroom/AddClassroom";
 import AddProject from "./components/Project/AddProject";
 import AddBook from "./components/Book/AddBook";
@@ -12,6 +11,7 @@ import Class from "./components/Classroom/Class";
 import Classroom from "../src/components/Student/Classroom";
 import Project from "../src/components/Student/Project";
 import Book from "../src/components/Student/Book";
+import AddAssignment from "./components/Assignment/AddAssignment";
 
 function App() {
   return (
@@ -39,7 +39,7 @@ function App() {
           <AddBook />
         </Route>
         <Route path="/AddAssignments">
-          <Sidebar SidebuttonTypeTwo={true} SidebuttonTypeFive={true} />
+        <AddAssignment />
         </Route>
         <Route path="/Classroom">
            <Classroom />
