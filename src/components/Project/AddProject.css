@@ -12,7 +12,7 @@
 .AddProject_item{
     display: grid;
     grid-template-columns: auto auto auto ;
-  grid-template-rows: auto ;
+    grid-template-rows: auto ;
     /* grid-template-columns: auto 100px 1fr 2fr; */
 
 }
