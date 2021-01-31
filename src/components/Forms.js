@@ -11,6 +11,7 @@ import Popup from "./Popup";
 import "./Form.css";
 import { useForm } from "react-hook-form";
 import { DataUsageTwoTone } from "@material-ui/icons";
+import {firebaseAp} from "../firebase";
 
 export default function Forms({ AddClassroom, Project, Book, Assignment, Buttonone, Buttontwo, Buttonthree }) {
   //   const validate = () => {
@@ -44,10 +45,18 @@ export default function Forms({ AddClassroom, Project, Book, Assignment, Buttono
   // };
 
  
+  const setBookImage = (e) => {
+    const file = e.target.value[0]
+    const storageRef = firebaseAp.storage().ref()
+    const filedRef = storageRef.child(file.name)
+    filedRef.put(file).then(() => {
+      console.log("Upload file", file.name)
+    })
+  }
 
 
-
-  const clickmeone = async () => {
+  const clickmeone = async (e) => {
+    e.prevent.Default()
     try {
       const result = await fetch("http://localhost:7000/info/", {
         method: "post",
@@ -101,7 +110,7 @@ export default function Forms({ AddClassroom, Project, Book, Assignment, Buttono
         body: JSON.stringify({
           bookname: `${bookName}`,
           authorname: `${authorName}`,
-          bookimage: `${bookImage}`,
+          // bookimage: `${bookImage}`,
           bookpdf: `${bookPdf}`,
         })
       });
@@ -120,7 +129,7 @@ export default function Forms({ AddClassroom, Project, Book, Assignment, Buttono
   const [feature, setFeature] = useState("");
   const [bookName, setBookName] = useState("");
   const [authorName, setAuthorName] = useState("");
-  const [bookImage, setBookImage] = useState("");
+  // const [bookImage, setBookImage] = useState("");
   const [bookPdf, setBookPdf] = useState("");
   const [assignmentTitle, setAssignmentTitle] = useState("");
   const [instruction, setInstruction] = useState("");
@@ -249,8 +258,8 @@ export default function Forms({ AddClassroom, Project, Book, Assignment, Buttono
                 accept="image/*"
                 // error={errors.bookImage}
                 type="file"
-                value={bookImage}
-                onChange={(e) => setBookImage(e.target.value)}
+                // value={bookImage}
+                onChange={setBookImage}
               />
             )}
             {Book && (
