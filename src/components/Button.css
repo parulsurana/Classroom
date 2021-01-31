@@ -74,7 +74,7 @@
 
 .crossButton{
   /* background-color: #f46303; */
-  color: #f46303;
+  color: #40328d;
   font-weight: bolder;
   font-size: 100%;
   padding: 3px 11px;
@@ -87,10 +87,10 @@
 
 .add{
   display: flex;
-  background-color: #f4511e;
-  border: none;
-  color: white;
-  padding: 16px 32px;
+  background-color: transparent;
+  border: 2px solid #19058b;
+  color: #000;
+  padding: 12px 28px;
   text-align: center;
   font-size: 16px;
   margin: 7px 10px;
@@ -102,7 +102,9 @@
 }
 
 .add:hover{
-  opacity: 1;
+  opacity: 0.8;
+  background-color: #19058b;
+  color: #fff;
 }
 
 .download{

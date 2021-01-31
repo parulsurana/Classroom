@@ -46,7 +46,7 @@ function App() {
         </Route>
         <Route path="/Projects">
            <Project/>
-        </Route>
+        </Route> 
         <Route path="/Books">
           <Book/>
         </Route>

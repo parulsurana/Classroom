@@ -29,7 +29,7 @@ export default function Popup(props) {
      <div style={{backgroundColor: "#cdd0cb", borderRadius: "4px"}}>
      <DialogTitle>
         <div style={{ display: "flex" }}>
-          <Typography variant="h6" component="div" style={{ flexGrow: 1, fontWeight: "bold", fontFamily: "Georgia, 'Times New Roman', Times, serif"}}>
+          <Typography variant="h5" component="div" style={{color: "gray", flexGrow: 1, fontWeight: "bold", fontFamily: "Georgia, 'Times New Roman', Times, serif"}}>
             {title}
           </Typography>
           <Button
