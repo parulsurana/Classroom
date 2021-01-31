@@ -6,7 +6,7 @@ import { useForm } from "react-hook-form";
 import { auth } from "../firebase";
 
 export default function Register({ Education, Section, instructor, student }) {
-  const { register, handleSubmit, errors, watch } = useForm();
+  const { register, handleSubmit, errors } = useForm();
   const onSubmit = (data) => {
     console.log(data);
   };
@@ -14,7 +14,7 @@ export default function Register({ Education, Section, instructor, student }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   // const [section, setSection] = useState("");
-  const signUp = (e) => {
+  const signUpI = (e) => {
     e.preventDefault()
 
     auth
@@ -22,7 +22,20 @@ export default function Register({ Education, Section, instructor, student }) {
       .then((auth) => {
         console.log(auth);
         if (auth) {
-          history.push("/Classroom")
+          history.push("/Instructor")
+        }
+      })
+      .catch(error => alert(error.message))
+  };
+  const signUpS = (e) => {
+    e.preventDefault()
+
+    auth
+      .createUserWithEmailAndPassword(email, password)
+      .then((auth) => {
+        console.log(auth);
+        if (auth) {
+          history.push("/Student")
         }
       })
       .catch(error => alert(error.message))
@@ -119,9 +132,12 @@ export default function Register({ Education, Section, instructor, student }) {
           )}
         </div>
 
-        <div className="userSubmit" onClick={signUp}>
+        {instructor && <div className="userSubmit" onClick={signUpI}>
           <Button buttonName="submit" label="Sign up" />
-        </div>
+        </div>}
+        {student && <div className="userSubmit" onClick={signUpS}>
+          <Button buttonName="submit" label="Sign up" />
+        </div>}
 
         <div className="register__footer">
           <p className="already">
