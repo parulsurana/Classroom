@@ -54,8 +54,9 @@ img {
 
 .blog_postText {
   margin-bottom: 1rem;
-  font-size: 1.8rem;
+  font-size: 1.3rem;
   color: rgb(32, 43, 54);
   font-family: "Poppins", sans-serif;
   font-weight: normal;
+  font-style:italic;
 }
