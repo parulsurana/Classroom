@@ -39,11 +39,12 @@
 
 .container .card .imgBx img{
     max-width: 100%;
-    height: 200px;
+    height: 180px;
     border-radius: 4px;
+    opacity: 80%;
 }
 
-.container .card .content{
+ .features{
     position: relative;
     margin-top: -140px;
     margin-bottom: 20px;
@@ -56,7 +57,20 @@
     transition: 0.3s ease-in-out;
 }
 
-.container .card:hover .content{
+ .projectname{
+    position: relative;
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    text-align: center;
+    color: #123;
+    max-height: auto;
+    transition: 0.3s ease-in-out;
+    visibility: visible;
+    opacity: 1;
+    margin-top: -65px;
+}
+
+.container .card:hover .content .features{
     visibility: visible;
     opacity: 1;
     margin-top: -40px;

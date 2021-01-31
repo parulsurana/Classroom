@@ -45,14 +45,6 @@ export default function Forms({ AddClassroom, Project, Book, Assignment, Buttono
   // };
 
 
-  const setBookImage = (e) => {
-    const file = e.target.value[0]
-    const storageRef = firebaseAp.storage().ref()
-    const filedRef = storageRef.child(file.name)
-    filedRef.put(file).then(() => {
-      console.log("Upload file", file.name)
-    })
-  }
 
 
   const clickmeone = async () => {
@@ -65,18 +57,13 @@ export default function Forms({ AddClassroom, Project, Book, Assignment, Buttono
           "Content-type": "application/json",
         },
         body: JSON.stringify({
-          // classname: `${className}`,
-          // subject: `${subject}`,
-          // roomlink: `${roomLink}`,
-          // section: `${section}`,
-          // startDate: `${startDate}`,
-          // endDate: `${endDate}`
-          classname: "qweert",
-          subject: "maths",
-          roomlink: "qer-tyu",
-          section: "5th",
-          startDate: "21-1-2020",
-          endDate: "21-2-2020"
+          classname: `${className}`,
+          subject: `${subject}`,
+          roomlink: `${roomLink}`,
+          section: `${section}`,
+          startDate: `${startDate}`,
+          endDate: `${endDate}`
+        
         })
       });
       console.log("Result:" + result)
@@ -148,7 +135,7 @@ export default function Forms({ AddClassroom, Project, Book, Assignment, Buttono
             {AddClassroom && (
               <Input
                 variant="outlined"
-                label="Class Name"
+                label="Batch"
                 name="ClassName"
                 value={className}
                 onChange={(e) => setClassName(e.target.value)}
@@ -170,7 +157,7 @@ export default function Forms({ AddClassroom, Project, Book, Assignment, Buttono
             {AddClassroom && (
               <Input
                 variant="outlined"
-                label="Room Link"
+                label="Room Link Code"
                 name="RoomLink"
                 // error={errors.RoomLink}
                 value={roomLink}
@@ -180,7 +167,7 @@ export default function Forms({ AddClassroom, Project, Book, Assignment, Buttono
 
             {AddClassroom && (
               <Select
-                label="Section"
+                label="Branch"
                 name="Section"
                 options={GetSectionCollection}
                 // error={errors.SectionId}
@@ -189,7 +176,7 @@ export default function Forms({ AddClassroom, Project, Book, Assignment, Buttono
               />
             )}
 
-            {AddClassroom && (
+            {/* {AddClassroom && (
               <DatePickers
                 label="Start Date"
                 name="StartDate"
@@ -205,7 +192,7 @@ export default function Forms({ AddClassroom, Project, Book, Assignment, Buttono
                 value={endDate}
                 onChange={(e) => setEndDate(e.target.value)}
               />
-            )}
+            )} */}
 
             {Project && (
               <Input
