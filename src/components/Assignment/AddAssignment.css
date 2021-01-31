@@ -1,5 +1,5 @@
-.assignment{
-    background-image: url('https://github.com/parulsurana/Classroom/blob/master/src/Assets/4853433%20(1).jpg?raw=true');
+.AddAssignment {
+  background-image: url('https://github.com/parulsurana/Classroom/blob/master/src/Assets/4853433%20(1).jpg?raw=true');
   background-repeat: no-repeat;
-  background-size: cover;
+  height: 100vh;
 }
