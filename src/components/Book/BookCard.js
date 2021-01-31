@@ -8,7 +8,7 @@ function BookCard({ bookTitle, bookDescription }) {
         <div className="blog_post">
           <div className="blog_postImg">
             <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHA_MX2ITfOxFaGkry7zWdqqjz8GtIm7kSbQ&usqp=CAU"
+              src="https://github.com/parulsurana/Classroom/blob/master/src/Assets/images-_1_.jpg?raw=true"
               alt="book"
             />
           </div>{" "}

@@ -246,7 +246,7 @@ export default function Forms({ AddClassroom, Project, Book, Assignment, Buttono
                 onChange={(e) => setAuthorName(e.target.value)}
               />
             )}
-            {Book && (
+            {/* {Book && (
               <input
                 style={{
                   fontSize: "20px",
@@ -261,7 +261,8 @@ export default function Forms({ AddClassroom, Project, Book, Assignment, Buttono
                 // value={bookImage}
                 onChange={setBookImage}
               />
-            )}
+            )} */}
+           
             {Book && (
               <>
                 {" "}
