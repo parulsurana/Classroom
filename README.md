@@ -1,70 +1,143 @@
-# Getting Started with Create React App
+<h1 align="center" border-left="5px">
+    <img align="right" alt="GIF" height="60px" src="https://media.giphy.com/media/du3J3cXyzhj75IOgvA/giphy.gif" />
+    Winter Project
+  <br>
+  Study Hut <img src="https://media.giphy.com/media/9S3FMee8gGGRBhZsA7/giphy.gif" width="36px">
+</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
 
-## Available Scripts
+<a href="https://github.com/parulsurana/Classroom/fork" target="blank">
+<img src="https://img.shields.io/github/forks/parulsurana/Classroom?style=flat-square" alt="Classroom forks"/>
+</a>
+<a href="https://github.com/parulsurana/Classroom/stargazers" target="blank">
+<img src="https://img.shields.io/github/stars/parulsurana/Classroom?style=flat-square" alt="Classroom stars"/>
+</a>
+<a href="https://github.com/parulsurana/Classroom/issues" target="blank">
+<img src="https://img.shields.io/github/issues/parulsurana/Classroom?style=flat-square" alt="Classroom issues"/>
+</a>
+<a href="https://github.com/parulsurana/Classroom/pulls" target="blank">
+<img src="https://img.shields.io/github/issues-pr/parulsurana/Classroom?style=flat-square" alt="Classroom pull-requests"/>
+</a>
+</p>
 
-In the project directory, you can run:
+####  GitHub Profile README whats's included?
 
-### `npm start`
+This site provides a way to help `Students` to get easy access to their classrooms. Additionally they also get suggestions for `projects` and `books` too.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Many times we are in a dilemma after searching for books, projects and a lot of study stuff from Google hence we have tried to make an online webapp which 
+work as a classroom, centralizing the specific collection referred by the instructor.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
+**The Backend Files can be found at [ClassRoom Backend](https://github.com/sejal8745/ClassroomBackend)**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## <img src="https://github.com/LakhanKumawat/LakhanKumawat/blob/master/Assets/Rocket.gif" width="22px"> Demo 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<a href="https://parulsurana.github.io/Classroom" target="blank">
+<img src="https://img.shields.io/website?url=https%3A%2F%2Fparulsurana.github.io%2FClassroom&logo=github&style=flat-square" />
+</a>
+<img align="right" src="http://estruyf-github.azurewebsites.net/api/VisitorHit?user=parulsurana&repo=ClassroomlorcountColor&countColor=%237B1E7B"/>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## <img src="https://media4.giphy.com/media/iIZ0G8bDanFrjttoWn/giphy.gif" width="35px"> Snapshots 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**HOME PAGE**
+>
+<img src="https://github.com/parulsurana/Classroom/blob/master/src/Assets/Home.png?raw=true" width="50%"/>
 
-### `npm run eject`
+**PROJECTS**
+>
+<img src="https://github.com/parulsurana/Classroom/blob/master/src/Assets/Screenshot%20(636).png?raw=true" width="50%" />
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+**BOOKS**
+>
+<img src="https://github.com/parulsurana/Classroom/blob/master/src/Assets/Book.png?raw=true" width="50%"/>
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## 🧐 Features and Goals
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+`Instructor`
 
-## Learn More
+- *Create Classroom*
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- *Projects suggestions*
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- *Books Suggestions*
 
-### Code Splitting
+- *Create Assignments*
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+`Student`
 
-### Analyzing the Bundle Size
+- *Easy access to courses*
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- *Find Projects*
 
-### Making a Progressive Web App
+- *Find Reference Books*
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- *Do Assignments*
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 🛠️ Installation Steps
+###  <code><img height="20" src="https://github.com/npm/logos/blob/master/npm%20logo/npm-logo-red.png"></code>
+  1. open Terminal and clone the repo
 
-### Deployment
+```bash
+  git clone https://github.com/parulsurana/Classroom.git
+```
+ 2. cd over 
+ 
+```bash
+   cd Classroom
+```
+  3. Install packages and dependencies
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```bash
+  npm install
+```
+ 
+  4. Run the app
 
-### `npm run build` fails to minify
+```bash
+  npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+🌟 You are all set!
+
+- And you will be redirected to the HomePage of Classroom.
+
+- Now you can register yourself as the Instructor/Student.
+
+- Being an Instructor, you can add multiple classes, projects, assignments and give book suggestions/reference to the student. 
+
+- And being a Student, Enjoy Classes :)
+
+
+## <img src="https://media.giphy.com/media/lqwcYeLIvQSUcSf6nP/giphy.gif" alt="prerequisite" width="35px" > Prerequisites for OS
+
+- [Node @latest](https://nodejs.org/en/)
+- [Npm @latest](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
+- [MongoDB (Mlab)](https://www.mongodb.com/)
+- [Firebase](https://firebase.google.com/)
+
+
+## <img src="https://media.giphy.com/media/5ndklThG9vUUdTmgMn/giphy.gif" alt="prerequisite" width="38px" > Tech Stack
+<code><img height="30" src="https://raw.githubusercontent.com/github/explore/5c058a388828bb5fde0bcafd4bc867b5bb3f26f3/topics/css/css.png"></code>
+<code><img height="30" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png"></code>
+<code><img height="30" src="https://mildaintrainings.com/wp-content/uploads/2017/11/react-logo.png"></code>
+<code><img height="30" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/terminal/terminal.png"></code>
+<code><img height="30" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9GZqCowPh3wnEdG2jj6aypokn9OZz_i9w_Q&usqp=CAU"></code>
+<code><img height="30" src="https://cdn.filestackcontent.com/5yjLJYBrQ6EHpN9dK0ak"></code>
+
+## <img src="https://media.giphy.com/media/Y3eZ2VA2b2UP5Lz6os/giphy.gif" alt="prerequisite" width="40px" > Contributors
+
+
+  - `SEJAL GOYAL` [https://github.com/sejal8745](https://github.com/sejal8745)
+  - `PARUL SURANA` [https://github.com/parulsurana](https://github.com/parulsurana)
+
+
+Please contribute using [GitHub Flow](https://guides.github.com/introduction/flow). Create a branch, add commits, and [open a pull request](https://github.com/Lakhankumawat/HackNITP-3.0/compare).
+
+
+<hr>
+
