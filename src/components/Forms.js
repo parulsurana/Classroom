@@ -11,7 +11,7 @@ import Popup from "./Popup";
 import "./Form.css";
 import { useForm } from "react-hook-form";
 import { DataUsageTwoTone } from "@material-ui/icons";
-import {firebaseAp} from "../firebase";
+import { firebaseAp } from "../firebase";
 
 export default function Forms({ AddClassroom, Project, Book, Assignment, Buttonone, Buttontwo, Buttonthree }) {
   //   const validate = () => {
@@ -44,7 +44,7 @@ export default function Forms({ AddClassroom, Project, Book, Assignment, Buttono
   //   }
   // };
 
- 
+
   const setBookImage = (e) => {
     const file = e.target.value[0]
     const storageRef = firebaseAp.storage().ref()
@@ -55,8 +55,7 @@ export default function Forms({ AddClassroom, Project, Book, Assignment, Buttono
   }
 
 
-  const clickmeone = async (e) => {
-    e.prevent.Default()
+  const clickmeone = async () => {
     try {
       const result = await fetch("http://localhost:7000/info/", {
         method: "post",
@@ -66,18 +65,24 @@ export default function Forms({ AddClassroom, Project, Book, Assignment, Buttono
           "Content-type": "application/json",
         },
         body: JSON.stringify({
-          classname: `${className}`,
-          subject: `${subject}`,
-          roomlink: `${roomLink}`,
-          section: `${section}`,
-          startDate: `${startDate}`,
-          endDate: `${endDate}`
+          // classname: `${className}`,
+          // subject: `${subject}`,
+          // roomlink: `${roomLink}`,
+          // section: `${section}`,
+          // startDate: `${startDate}`,
+          // endDate: `${endDate}`
+          classname: "qweert",
+          subject: "maths",
+          roomlink: "qer-tyu",
+          section: "5th",
+          startDate: "21-1-2020",
+          endDate: "21-2-2020"
         })
       });
       console.log("Result:" + result)
     } catch (e) {
       console.log(e)
-    } 
+    }
   };
   const clickmetwo = async () => {
     try {
@@ -96,7 +101,7 @@ export default function Forms({ AddClassroom, Project, Book, Assignment, Buttono
       console.log("Result:" + result)
     } catch (e) {
       console.log(e)
-    } 
+    }
   };
   const clickmethree = async () => {
     try {
@@ -117,7 +122,7 @@ export default function Forms({ AddClassroom, Project, Book, Assignment, Buttono
       console.log("Result:" + result)
     } catch (e) {
       console.log(e)
-    } 
+    }
   };
   const [className, setClassName] = useState("");
   const [subject, setSubject] = useState("");
@@ -147,7 +152,7 @@ export default function Forms({ AddClassroom, Project, Book, Assignment, Buttono
                 name="ClassName"
                 value={className}
                 onChange={(e) => setClassName(e.target.value)}
-                // error={errors.ClassName}
+              // error={errors.ClassName}
               />
             )}
 
@@ -156,7 +161,7 @@ export default function Forms({ AddClassroom, Project, Book, Assignment, Buttono
                 variant="outlined"
                 label="Subject"
                 name="Subject"
-                  // error={errors.Subject}
+                // error={errors.Subject}
                 value={subject}
                 onChange={(e) => setSubject(e.target.value)}
               />
@@ -262,7 +267,7 @@ export default function Forms({ AddClassroom, Project, Book, Assignment, Buttono
                 onChange={setBookImage}
               />
             )} */}
-           
+
             {Book && (
               <>
                 {" "}
@@ -321,15 +326,15 @@ export default function Forms({ AddClassroom, Project, Book, Assignment, Buttono
                 />
               </>
             )}
-           {Buttonone && (< Button label="Submit" buttonName="add" onClick={clickmeone}/>)}
-           {Buttontwo && < Button label="Submit" buttonName="add" onClick={clickmetwo}/>}
-           {Buttonthree && < Button label="Submit" buttonName="add" onClick={clickmethree}/>}
+            {Buttonone && (< Button label="Submit" buttonName="add" onClick={clickmeone} />)}
+            {Buttontwo && < Button label="Submit" buttonName="add" onClick={clickmetwo} />}
+            {Buttonthree && < Button label="Submit" buttonName="add" onClick={clickmethree} />}
           </Grid>
         </Grid>
       </Form>
 
     </>
-  
+
   );
 }
 
