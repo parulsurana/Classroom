@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import Sidebar from "../Sidebar";
-import Card from "../Card";
-import "./AddClassroom.css";
+import SidebarS from "./SidebarS";
+import Card from "../Card.js";
+import "../Classroom/AddClassroom.css";
 
 export default function AddClassroom() {
 
@@ -30,7 +30,7 @@ export default function AddClassroom() {
   return (
     <div className="AddClassroom">
       <div className="AddClassroom_header">
-        <Sidebar Menuicon={false} sideMenu={false} SidebuttonTypeOne={true} SidebuttonTypeFive={true} />
+        <SidebarS />
       </div>
       <div className="AddClassroom_item">
         {create.map((creates) => (

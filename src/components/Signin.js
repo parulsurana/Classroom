@@ -10,7 +10,17 @@ export default function Signin({ Instructor, Student }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const signIn = e => {
+  const signInI = e => {
+    e.preventDefault()
+    auth
+      .signInWithEmailAndPassword(email, password)
+      .then((auth) => {
+        history.push("/AddClassroom");
+      })
+      .catch(error => alert(error.message))
+  }
+
+  const signInS = e => {
     e.preventDefault()
     auth
       .signInWithEmailAndPassword(email, password)
@@ -20,10 +30,12 @@ export default function Signin({ Instructor, Student }) {
       .catch(error => alert(error.message))
   }
 
+
+
   return (
 
     <div className="login-page">
-      <div class="login-box">
+      <div class="login-box"> 
         <div className="login__header">
           <h2>Sign In</h2>
         </div>
@@ -55,9 +67,12 @@ export default function Signin({ Instructor, Student }) {
             <p className="error_message">password is required</p>
           )}
           </div>
-          <div className="client__submit" onClick={signIn}>
+          {Instructor && <div className="client__submit" onClick={signInI}>
             <Button buttonName="submit" label="Sign in" />
-          </div>
+          </div>}
+         { Student && <div className="client__submit" onClick={signInS}>
+            <Button buttonName="submit" label="Sign in" />
+          </div>}
           <div className="login__footer">
             <p className="create">
               Create your Account
