@@ -33,18 +33,18 @@ export default function Signin({ Instructor, Student }) {
 
 
   return (
+
     <div className="login-page">
       <div class="login-box"> 
         <div className="login__header">
           <h2>Sign In</h2>
         </div>
 
-        <form>
+  
           <div className="client-box">
           <label>Email</label>
           <input
             name="email"
-            placeholder="Email"
             type="email"
             ref={register({ required: true })}
             value={email}
@@ -58,7 +58,6 @@ export default function Signin({ Instructor, Student }) {
           <label>Password</label>
           <input
             name="password"
-            placeholder="Password"
             type="password"
             ref={register({ required: true })}
             value={password}
@@ -89,7 +88,6 @@ export default function Signin({ Instructor, Student }) {
               )}
             </p>
           </div>
-        </form>
       </div>
     </div>
   );

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -8,97 +10,122 @@
   text-align: center;
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: cover;
+  background-size: 100%;
   background-attachment: fixed;
+  overflow: hidden;
+
 }
 
+.HomeCard {
+  width: 70%;
+  min-width: 200px;
+  height: 600px;
+  background-color: #ececec;
+  box-shadow: 0 1.4rem 4rem rgba(0, 0, 0, 0.2);
+  display: flex;
+  border-radius: 0.8rem;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  opacity: 80%;
+}
 
-.Navbar {
-  background-color: black;
-  opacity: 65%;
-  height: 70px;
+.HomeHeader{
+display: block;
+
+}
+
+.HomeHeader > img{
+margin-right: 250px;
+margin-bottom: 150px;
+}
+
+.HomeButton{
+  display: flex;
+ 
 }
 
 .Logo {
   width: 250px;
-  /* margin-right: 20px;
-  margin: 0 auto 100px auto; */
 }
 
-.Nav > p {
-  margin-top: 200px;
-  font-family: "Italianno", cursive;
-  font-size: 100px;
+ .HomeHeading > p {
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 40px;
+  margin-left: 30px;
   font-weight: normal;
-  color: whitesmoke;
+  color: #000;
+} 
+
+.HeaderSpan{
+  color: #158467;
 }
+
+
+.Homesvg{
+  width: 500px;
+  margin-top: 70px;
+}
+
 
 @media only screen and (max-width: 535px) {
   .Home {
-    background-image: linear-gradient(
-        rgba(212, 209, 209, 0.5),
-        rgba(0, 0.8, 0.8, 0.5)
-      ),
-      url("../Assets/mainImage.jpg");
+    background-image:
+      url("../Assets/bg.jpg");
     height: 100vh;  
     overflow: hidden;
+    z-index: 999;
   }
 }
 
 @media only screen and (min-width: 500px) {
   .Home {
-    background-image: linear-gradient(
-        rgba(212, 209, 209, 0.5),
-        rgba(0, 0.8, 0.8, 0.5)
-      ),
-      url("../Assets/mainImage.jpg");
-    height: 100vh;  
+    background-image: 
+      url("../Assets/bg.jpg");
+    height: 100vh; 
+    z-index: 999; 
   }
 }
 
 @media only screen and (min-width: 600px) {
   .Home {
-    background-image: linear-gradient(
-        rgba(212, 209, 209, 0.5),
-        rgba(0, 0.8, 0.8, 0.5)
-      ),
-      url("../Assets/mainImage.jpg");
-      height: 100vh;  
+    background-image: 
+      url("../Assets/bg.jpg");
+      height: 100vh; 
+      z-index: 999; 
   }
 }
 
 @media only screen and (min-width: 768px) {
   .Home {
-    background-image: linear-gradient(
-        rgba(212, 209, 209, 0.5),
-        rgba(0, 0.8, 0.8, 0.5)
-      ),
-      url("../Assets/mainImage.jpg");
-      height: 100vh;  
+    background-image: 
+      url("../Assets/bg.jpg");
+      height: 100vh;
+      z-index: 999;  
 
   }
 }
 
 @media only screen and (min-width: 992px) {
   .Home {
-    background-image: linear-gradient(
-        rgba(212, 209, 209, 0.5),
-        rgba(0, 0.8, 0.8, 0.5)
-      ),
-      url("../Assets/mainImage.jpg");
-      height: 100vh;  
+    background-image: 
+      url("../Assets/bg.jpg");
+      height: 100vh; 
+      z-index: 999; 
 
   }
 }
 @media only screen and (min-width: 1200px) {
   .Home {
-    background-image: linear-gradient(
-        rgba(212, 209, 209, 0.5),
-        rgba(0, 0.8, 0.8, 0.5)
-      ),
-      url("../Assets/mainImage.jpg");
-      height: 100vh;  
+    background-image:
+      url("../Assets/bg.jpg");
+      height: 100vh; 
+      z-index: 999; 
 
   }
 }
 
+ /* linear-gradient(
+  rgba(212, 209, 209, 0.5),
+  rgba(0, 0.8, 0.8, 0.5)
+), */
