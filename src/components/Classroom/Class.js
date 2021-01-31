@@ -1,8 +1,28 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Sidebar from "../Sidebar";
 import "./Class.css";
 import {CardClick} from "./AddClassroom";
+import { useHistory } from "react-router-dom";
+import { selectOpenMail } from "../../mailSlice";
+import { useSelector } from "react-redux";
+
 export default function Class({className, section}) {
+  const history = useHistory();
+  const selectedMail = useSelector(selectOpenMail);
+  console.log(selectedMail?.ide);
+  
+const [cards, setCards] = useState("");
+setCards(selectedMail?.ide);
+
+    useEffect((cards) => {
+      async function fetchData(cards) {
+        const url = "http://localhost:7000/info/"+cards;
+     const response = await fetch(url);
+   const dataa = await response.json();
+  console.log(dataa);
+      }
+      fetchData(cards);
+    }, []);
 
   return (
   //  <CardClick>
@@ -25,12 +45,12 @@ export default function Class({className, section}) {
                 <h1 className="main_heading main_overflow">
                   {" "}
                   {className}
-                  Maths{" "}
+                 
                 </h1>{" "}
                 <div className="main_section main_overflow">
                   {" "}
                   {section}
-                  QWERT{" "}
+               
                 </div>{" "}
                 <div className="main__wrapper2">
                   <em className="main__code"> Class Code: </em>{" "}
