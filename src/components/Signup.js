@@ -41,7 +41,6 @@ export default function Register({ Education, Section, instructor, student }) {
           <label>UserName</label>
           <input
             name="username"
-            placeholder="UserName"
             type="text"
             ref={register({ required: true })}
           ></input>
@@ -54,7 +53,6 @@ export default function Register({ Education, Section, instructor, student }) {
           <label>Gender</label>
           <input
             name="gender"
-            placeholder="Gender"
             type="text"
             ref={register({ required: false })}
           ></input>
@@ -65,7 +63,6 @@ export default function Register({ Education, Section, instructor, student }) {
           {Education && (
             <input
               name="education"
-              placeholder="Education"
               type="text"
               ref={register({ required: true })}
             />
@@ -77,7 +74,6 @@ export default function Register({ Education, Section, instructor, student }) {
           {Section && (
             <input
               name="section"
-              placeholder="Section"
               type="text"
               ref={register({ required: true })}
               // value={section}
@@ -93,7 +89,6 @@ export default function Register({ Education, Section, instructor, student }) {
           <label>Email</label>
           <input
             name="email"
-            placeholder="Email"
             type="email"
             ref={register({ required: true })}
             value={email}
@@ -108,7 +103,6 @@ export default function Register({ Education, Section, instructor, student }) {
           <label>Password</label>
           <input
             name="password"
-            placeholder="Password"
             type="password"
             ref={register({ required: true })}
             value={password}
