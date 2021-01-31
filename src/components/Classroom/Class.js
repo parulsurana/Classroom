@@ -2,9 +2,11 @@ import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Sidebar from "../Sidebar";
 import "./Class.css";
+import {CardClick} from "./AddClassroom";
 export default function Class({className, section}) {
 
   return (
+  //  <CardClick>
     <div>
       <div className="AddClassroom_header">
         <Sidebar
@@ -41,5 +43,6 @@ export default function Class({className, section}) {
         </div>{" "}
       </div>{" "}
     </div>
+    // </CardClick>
   );
 }

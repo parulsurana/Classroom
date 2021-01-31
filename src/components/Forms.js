@@ -11,7 +11,7 @@ import Popup from "./Popup";
 import "./Form.css";
 import { useForm } from "react-hook-form";
 import { DataUsageTwoTone } from "@material-ui/icons";
-import {firebaseAp} from "../firebase";
+import { firebaseAp } from "../firebase";
 
 export default function Forms({ AddClassroom, Project, Book, Assignment, Buttonone, Buttontwo, Buttonthree }) {
   //   const validate = () => {
@@ -44,19 +44,8 @@ export default function Forms({ AddClassroom, Project, Book, Assignment, Buttono
   //   }
   // };
 
- 
-  const setBookImage = (e) => {
-    e.prevent.Default()
-    const file = e.target.value[0]
-    const storageRef = firebaseAp.storage().ref()
-    const filedRef = storageRef.child(file.name)
-    filedRef.put(file).then(() => {
-      console.log("Upload file", file.name)
-    })
-  }
 
-
-  const clickmeone = async (e) => {
+  const clickmeone = async () => {
     try {
       const result = await fetch("http://localhost:7000/info/", {
         method: "post",
@@ -72,12 +61,13 @@ export default function Forms({ AddClassroom, Project, Book, Assignment, Buttono
           section: `${section}`,
           startDate: `${startDate}`,
           endDate: `${endDate}`
+        
         })
       });
       console.log("Result:" + result)
     } catch (e) {
       console.log(e)
-    } 
+    }
   };
   const clickmetwo = async () => {
     try {
@@ -96,7 +86,7 @@ export default function Forms({ AddClassroom, Project, Book, Assignment, Buttono
       console.log("Result:" + result)
     } catch (e) {
       console.log(e)
-    } 
+    }
   };
   const clickmethree = async () => {
     try {
@@ -117,7 +107,7 @@ export default function Forms({ AddClassroom, Project, Book, Assignment, Buttono
       console.log("Result:" + result)
     } catch (e) {
       console.log(e)
-    } 
+    }
   };
   const [className, setClassName] = useState("");
   const [subject, setSubject] = useState("");
@@ -143,11 +133,11 @@ export default function Forms({ AddClassroom, Project, Book, Assignment, Buttono
             {AddClassroom && (
               <Input
                 variant="outlined"
-                label="Class Name"
+                label="Batch"
                 name="ClassName"
                 value={className}
                 onChange={(e) => setClassName(e.target.value)}
-                // error={errors.ClassName}
+              // error={errors.ClassName}
               />
             )}
 
@@ -156,7 +146,7 @@ export default function Forms({ AddClassroom, Project, Book, Assignment, Buttono
                 variant="outlined"
                 label="Subject"
                 name="Subject"
-                  // error={errors.Subject}
+                // error={errors.Subject}
                 value={subject}
                 onChange={(e) => setSubject(e.target.value)}
               />
@@ -165,7 +155,7 @@ export default function Forms({ AddClassroom, Project, Book, Assignment, Buttono
             {AddClassroom && (
               <Input
                 variant="outlined"
-                label="Room Link"
+                label="Room Link Code"
                 name="RoomLink"
                 // error={errors.RoomLink}
                 value={roomLink}
@@ -175,7 +165,7 @@ export default function Forms({ AddClassroom, Project, Book, Assignment, Buttono
 
             {AddClassroom && (
               <Select
-                label="Section"
+                label="Branch"
                 name="Section"
                 options={GetSectionCollection}
                 // error={errors.SectionId}
@@ -184,7 +174,7 @@ export default function Forms({ AddClassroom, Project, Book, Assignment, Buttono
               />
             )}
 
-            {AddClassroom && (
+            {/* {AddClassroom && (
               <DatePickers
                 label="Start Date"
                 name="StartDate"
@@ -200,7 +190,7 @@ export default function Forms({ AddClassroom, Project, Book, Assignment, Buttono
                 value={endDate}
                 onChange={(e) => setEndDate(e.target.value)}
               />
-            )}
+            )} */}
 
             {Project && (
               <Input
@@ -262,7 +252,7 @@ export default function Forms({ AddClassroom, Project, Book, Assignment, Buttono
                 onChange={setBookImage}
               />
             )} */}
-           
+
             {Book && (
               <>
                 {" "}
@@ -321,15 +311,15 @@ export default function Forms({ AddClassroom, Project, Book, Assignment, Buttono
                 />
               </>
             )}
-           {Buttonone && (< Button label="Submit" buttonName="add" onClick={clickmeone}/>)}
-           {Buttontwo && < Button label="Submit" buttonName="add" onClick={clickmetwo}/>}
-           {Buttonthree && < Button label="Submit" buttonName="add" onClick={clickmethree}/>}
+            {Buttonone && (< Button label="Submit" buttonName="add" onClick={clickmeone} />)}
+            {Buttontwo && < Button label="Submit" buttonName="add" onClick={clickmetwo} />}
+            {Buttonthree && < Button label="Submit" buttonName="add" onClick={clickmethree} />}
           </Grid>
         </Grid>
       </Form>
 
     </>
-  
+
   );
 }
 
