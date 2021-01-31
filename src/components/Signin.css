@@ -3,49 +3,67 @@
   padding: 0;
 }
 
-.login-page {
-  text-align: center;
-  /* background-image: url("../Assets/mainImage-inverted.jpg"); */
-  height: 100vh;
+.login-page{
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-repeat: no-repeat;
-  background-size: cover;
   background-position: center center;
+  background-size: cover;
+  height: 100vh;
   background-attachment: fixed;
 }
 
 @media (max-width: 480px) {
   .login-page {
-    background-image: url("../Assets/mainImage-inverted.jpg");
+    background-image: url("../Assets/bg.jpg");
   }
 }
 
 @media (min-width: 481px) and (max-width: 1024px) {
   .login-page {
-    background-image: url("../Assets/mainImage-inverted.jpg");
+    background-image: url("../Assets/bg.jpg");
   }
 }
 
 @media (min-width: 1025px) {
   .login-page {
-    background-image: url("../Assets/mainImage-inverted.jpg");
+    background-image: url("../Assets/bg.jpg");
   }
 }
 
+.login-box {
+  background-color: #658388ee;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+  padding-right: 40px;
+  padding-left: 40px;
+  padding-bottom: 30px;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  width: 600px;
+  opacity: 80%;
+}
+
 .login__header {
-  padding: 13px;
+  font-size: 30px;
+  margin-bottom: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #DDC772;
-  font-size: 30px;
+  color: #fff;
 }
 
 .login__footer {
-  padding: 13px;
+  padding: 6px;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: whitesmoke;
+  color: #fff;
 }
 
 .client__submit {
@@ -55,35 +73,21 @@
   padding: 13px;
 }
 
-.login-box {
-  background-color: rgb(3, 3, 3, 0.8);
-  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
-  top: 50%;
-  bottom: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 400px;
-  height: 440px;
-  padding: 40px;
-  float: left;
-  margin: 150px;
-  margin-left: 150px;
+.client-box{
+  margin-bottom: 1px;
 }
 
 .client-box > input {
-  width: 280px;
+  width: 350px;
   padding-top: 8px;
   padding-bottom: 2px;
-  padding-left: 5px;
+  padding: 10px;
   font-size: 16px;
   color: rgb(233, 227, 227);
   text-decoration: none;
   margin-bottom: 20px;
-  border: none;
-  border: 1px solid rgb(122, 120, 120);
-  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.7);
+  border: 1px solid black;
+  border-radius: 20px;
   outline: none;
   background: transparent;
 }
@@ -91,12 +95,12 @@
 .client-box > label {
   display: flex;
   justify-content: start;
-  color: #DDC772;
+  color: #fff;
   padding-bottom: 5px;
+  font-size: 20px;
 }
 
 .create {
-  margin: 10px;
   font-size: 16px;
   font-family: Georgia, "Times New Roman", Times, serif;
   color: rgb(194, 191, 191);
@@ -104,7 +108,7 @@
 
 .linked-item {
   text-decoration: none;
-  color: #DDC772;
+  color: #fff;
   font-size: 20px;
   padding-left: 6px;
 }

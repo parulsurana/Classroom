@@ -16,56 +16,60 @@
 
 @media (max-width: 480px) {
   .register-page {
-    background-image: url("../Assets/mainImage.jpg");
+    background-image: url("../Assets/bg.jpg");
   }
 }
 
 @media (min-width: 481px) and (max-width: 1024px) {
   .register-page {
-    background-image: url("../Assets/mainImage.jpg");
+    background-image: url("../Assets/bg.jpg");
   }
 }
 
 @media (min-width: 1025px) {
   .register-page {
-    background-image: url("../Assets/mainImage.jpg");
+    background-image: url("../Assets/bg.jpg");
   }
 }
 
-.lapiImage {
+/* .lapiImage {
   flex: 1.5;
-}
+} */
 
 .register-box {
-  background-color: rgb(3, 3, 3, 0.8);
+  background-color: #658388ee;
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
   display: flex;
   flex-direction: column;
-  padding-top: 40px;
+  padding-top: 30px;
   padding-right: 40px;
   padding-left: 40px;
-  padding-bottom: 40px;
+  padding-bottom: 30px;
   margin: auto;
   align-items: center;
   justify-content: center;
-  flex: 0.5;
-  margin-right: 70px;
+  border-radius: 10px;
+  width: 600px;
+  opacity: 80%;
+  /* flex: 0.5; */
+  /* margin-right: 100px; */
 }
 
 .register__header {
-  padding: 13px;
+  font-size: 30px;
+  margin-bottom: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #DDC772;
+  color: #fff;
 }
 
 .register__footer {
-  padding: 13px;
+  padding: 6px;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #DDC772;
+  color: #fff;
 }
 
 .userSubmit {
@@ -76,18 +80,20 @@
 }
 
 .user-box {
-  margin: 10px;
+  margin-bottom: 1px;
 }
 
 .user-box > input {
-  width: 280px;
-  padding: 7px;
+  width: 400px;
+  padding-top: 8px;
+  padding-bottom: 2px;
+  padding: 10px;
   font-size: 16px;
-  color: rgb(255, 254, 254);
+  color: rgb(233, 227, 227);
   text-decoration: none;
-  border: none;
-  border: 1px solid rgb(122, 120, 120);
-  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.7);
+  margin-bottom: 20px;
+  border: 1px solid black;
+  border-radius: 20px;
   outline: none;
   background: transparent;
 }
@@ -95,8 +101,9 @@
 .user-box > label {
   display: flex;
   text-align: start;
-  color: #DDC772;
+  color: #fff;
   padding-bottom: 5px;
+  font-size: 20px;
 }
 
 .already {
@@ -107,7 +114,7 @@
 
 .link-item {
   text-decoration: none;
-  color: #DDC772;
+  color: #fff;
   font-size: 20px;
   padding-left: 6px;
 }
