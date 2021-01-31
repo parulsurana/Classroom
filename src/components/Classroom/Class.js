@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useParams } from "react-router-dom";
 import Sidebar from "../Sidebar";
 import "./Class.css";
 export default function Class({className, section}) {
+
   return (
     <div>
       <div className="AddClassroom_header">

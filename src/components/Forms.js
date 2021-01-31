@@ -46,6 +46,7 @@ export default function Forms({ AddClassroom, Project, Book, Assignment, Buttono
 
  
   const setBookImage = (e) => {
+    e.prevent.Default()
     const file = e.target.value[0]
     const storageRef = firebaseAp.storage().ref()
     const filedRef = storageRef.child(file.name)
@@ -56,7 +57,6 @@ export default function Forms({ AddClassroom, Project, Book, Assignment, Buttono
 
 
   const clickmeone = async (e) => {
-    e.prevent.Default()
     try {
       const result = await fetch("http://localhost:7000/info/", {
         method: "post",

@@ -50,9 +50,9 @@ function App() {
         <Route path="/Books">
           <Book/>
         </Route>
-        <Route path="/Assignments">
+        {/* <Route path="/Assignments">
            <Class/>
-        </Route>
+        </Route> */}
         <Route path="/">
           <Home />
         </Route>

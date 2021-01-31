@@ -17,13 +17,6 @@ export const SidebarDataS = [
     icon: <WorkIcon />,
     cName: "nav-text",
   },
-
-  {
-    title: "Assignments",
-    path: "/Assignments",
-    icon: <AssignmentIcon />,
-    cName: "nav-text",
-  },
   {
     title: "Books Suggestions",
     path: "/Books",
