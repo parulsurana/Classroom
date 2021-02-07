@@ -1,4 +1,9 @@
+
 import React, { useEffect, useState } from "react";
+
+
+import { useParams } from "react-router-dom";
+
 import Sidebar from "../Sidebar";
 import "./Class.css";
 import {CardClick} from "./AddClassroom";

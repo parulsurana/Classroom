@@ -45,8 +45,6 @@ export default function Forms({ AddClassroom, Project, Book, Assignment, Buttono
   // };
 
 
-
-
   const clickmeone = async () => {
     try {
       const result = await fetch("http://localhost:7000/info/", {
